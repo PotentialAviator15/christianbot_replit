@@ -94,17 +94,173 @@ async def library(ctx):
     embed12.add_field(name="`)doctrines`", value="Coming soon", inline=False)
     embed12.add_field(name="`)OR`", value="__O__nline __R__esources [Currently adding more sites]", inline=False)
     embed12.add_field(name="`)fallacies`", value="Gives you the ten commandments of logic in an image", inline=False)
-    embed12.add_field(name="`)philosophy`", value="Coming Soon", inline=False)
+    embed12.add_field(name="`)philosophy`", value="Will be fixed soon", inline=False)
     embed12.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.britanniapine.co.uk%2Fcontent%2Fimages%2Fproducts%2F312%2Fmain%2F..OpusSBC_SmallBookcase_Living.jpg&f=1&nofb=1")
     embed12.set_footer(text="Library", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed12)
 
+#fallacies
+
+@client.command()
+async def fallacy(ctx):
+  embed17 = discord.Embed(title="The Ten Fallacies", description="The Ten Fallacies You Should Never Use", color=discord.Color.random())
+  embed17.set_image(url="https://media.discordapp.net/attachments/880178538035159050/880639730612568084/FB_IMG_1630031249162.jpg?width=514&height=514")
+  embed17.set_footer(text="Library | Fallacies | Image", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  await ctx.send(embed=embed17)
+
+@client.command()
+async def adhominem(ctx):
+    embed1h = discord.Embed(title="Ad Hominem - Fallacy", description="1. Appealing to feelings or prejudices rather than intellect", url="https://www.merriam-webster.com/dictionary/ad%20hominem", color=0x00008b)
+    embed1h.add_field(name="2.", value="marked by or being an attack on an opponent's character rather than by an answer to the contentions made")
+    embed1h.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1h.set_footer(text="Library | Fallacies | Ad Hominem", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1h)
+
 @client.command()
 async def fallacies(ctx):
-  embed17 = discord.Embed(Title="The Ten Fallacies", Description="The Ten Fallacies You should never use", color=discord.Color.random())
-  embed17.set_image(url="https://media.discordapp.net/attachments/880178538035159050/880639730612568084/FB_IMG_1630031249162.jpg?width=514&height=514")
-  embed17.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-  await ctx.send(embed=embed17)
+    embed1l= discord.Embed(title="Fallacy Commands", color=0x00007b)
+    embed1l.add_field(name="`)fallacy`", value="Gives you the image of fallacies", inline=False)
+    embed1l.add_field(name="`)strawman`", value="Gives you the straw man fallacy.", inline=False)
+    embed1l.add_field(name="`)begging`", value="Gives you the begging the question fallacy", inline=False)
+    embed1l.add_field(name="`)generalizing`", value="Gives you the Hasty generalization fallacy", inline=False)
+    embed1l.add_field(name="`)adhominem`", value="Gives you the AD Hominem Fallacy", inline=False)
+    embed1l.add_field(name="`)posthoc`", value="Gives you the Post Hoc/False Cause fallacy", inline=False)
+    embed1l.add_field(name="`)falsedichotomy`", value="Gives you the fallacy of false dichotomy", inline=False)
+    embed1l.add_field(name="`)adignorantiam`", value="Gives you the fallacy of `Argument from Ignorance`", inline=False)
+    embed1l.add_field(name="`)bandwagon`", value="Gives you the Bandwagon Fallacy", inline=False)
+    embed1l.add_field(name="`)nonsequitur`", value="Gives you the Non Sequitur fallacy", inline=False)
+    embed1l.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=False)
+    embed1l.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1l.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1l)
+
+
+#EMBED TEMPLATES!!!
+
+#commandsmenutemplate
+#    #embed.add_field(name="``", value="", inline=False)
+#footertemplate
+#   #embed.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+#thumbnail template
+#embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+
+@client.command()
+async def strawman(ctx):
+    embed1i = discord.Embed(title="Straw man - Fallacy", description="The straw man is a fallacy in which an opponent's argument is overstated or misrepresented in order to be more easily attacked or refuted.", url="https://www.thoughtco.com/straw-man-fallacy-1692144", color=0x00008b)
+    embed1i.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1i.set_footer(text="Library | Fallacies | Strawman Fallacy")
+    await ctx.send(embed=embed1i)
+
+@client.command()
+async def begging(ctx): 
+    embed1j = discord.Embed(title="Begging The Question - Fallacy", description="This fallacy can also be known as a circular argument. Here are some examples.", url="https://www.thoughtco.com/begging-the-question-petitio-principii-250337", color=0x00008b)
+    embed1j.add_field(name="**1.**", value="A is true because A is true.", inline=False)
+    embed1j.add_field(name="**2.**", value="You should drive on the right side of the road because that is what the law says, and the law is the law.", inline=False)
+    embed1j.add_field(name="**3.**", value="Affirmative Action can never be fair or just. You cannot remedy one injustice by committing another.", inline=False)
+    embed1j.add_field(name="**4.**", value="A is true because B is true, and B is true because A is true.", inline=False)
+    embed1j.add_field(name="**5.**", value="A is true because B is true, and B is true because C is true, and C is true because A is true.", inline=False)
+    embed1j.add_field(name="**6.**", value="It says in the Qur'an that Allah exists. Since the Qur'an is Allah's word, and Allah never speaks falsely, then everything in the Qur'an must be true. Therfore, Allah must exist.", inline=False)
+    embed1j.add_field(name="**7.**", value="The Qur'an is true because Allah exists, and Allah exists because the Qur'an says so.", inline=False)
+    embed1j.add_field(name="**8.**", value="The universe has a beginning. Everything that has a beginning has a cause. Therefore, the universe has a cause called Allah.", inline=False)
+    embed1j.add_field(name="**9.**", value="We know Allah exists because we can see the perfect order of his creation, an order which demonstrates supernatural intelligence in its design.", inline=False)
+    embed1j.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1j.set_footer(text="Library | Fallacies | Begging the Question", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.semd(embed=embed1j)
+
+
+@client.command()
+async def posthoc(ctx):
+    embed1m = discord.Embed(title="Post Hoc/False Cause - Fallacy", description="Insisting that two things or events are correlated without any evidence to support it. In essense, correlation does not equal causation.", url="https://www.thoughtco.com/post-hoc-fallacy-1691650", color=0x00008b)
+    embed1m.set_footer(text="Library | Fallacies | Post Hoc/False Cause", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1m.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1m)
+
+client.command()
+async def falsedichotomy(ctx):
+    embed1n = discord.Embed(title="False Dichotomy - Fallacy", description="When two options are presented, and are either considered two complete opposites when they aren't necessarily, or when you single out two options as the only options.", color=0x00008b)
+    embed1n.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1n.set_footer(text="Library | Fallacies | False Dichotomy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1n)
+
+@client.command()
+async def adignorantiam(ctx):
+   embed1o = discord.Embed(title="Ad Ignorantiam - Fallacy", description="An argument from ignorance. When someone argues for/against something because there is not evidence to the contrary.", url="https://carm.org/dictionary/argumentum-ad-ignorantiam/", color=0x00008b)
+   embed1o.set_footer(text="Library | Fallacies | Ad Ignorantiam", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1o.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   await ctx.send(embed=embed1o)
+
+@client.command()
+async def generalizing(ctx):
+    embed1k = discord.Embed(title="Hasty Generalization - Fallacy", description="A hasty Generalization is a conclusion that is not logically justified by sufficient (or sufficiently unbiased) evidence.", url="https://www.thoughtco.com/hasty-generalization-fallacy-1690919", color=0x00008b)
+    embed1k.set_footer(text="Library | Fallacies | Hasty Generalization", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1k.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1k)
+
+@client.command()
+async def bandwagon(ctx):
+    embed1p = discord.Embed(title="Bandwagon - Fallacy", description="When something is argued for, based on its popularity. I.e. *Twitter is so popular! It must be a good platform.* ", color=0x00008b)
+    embed1p.set_footer(text="Library | Fallacies | Bandwagon Fallacy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1p.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1p)
+
+@client.command()
+async def nonsequitur(ctx):
+    embed1q = discord.Embed(title="Non sequitur - Fallacy", description="When *this* follows *that* when there is no logic to reach that conclusion, or when there is a conclusion reached, and there is nothing logically there to support the conclusion.", color=0x00008b)
+    embed1q.set_footer(text="Library | Fallacies | Non Sequitur", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1q.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1q)
+
+@client.command()
+async def bopr(ctx):
+   embed1r = discord.Embed(title="Burden of Proof Reversal - Fallacy", description="making a claim that needs justification, and then demanding the opponent to provide burden of proof for the opposite claim.", color=0x00008b)
+   embed1r.set_footer(text="Library | Fallacies | Burden of Proof Reversal", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1r.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   await ctx.send(embed=embed1r)
+
+#philosophycmds
+
+@client.command()
+async def philosophy(ctx):
+    embed1d = discord.Embed(title="Philosophy", color=0xffffff)
+    embed1d.add_field(name="`)kalam`", value="Gives you the Kalam Cosmological Argument in it's most simplest terms.", inline=False)
+    embed1d.add_field(name="`)ontological`", value="Gives you the Ontological argument in it's nost simplest form")
+    embed1d.add_field(name="`)moral`", value="Gived you the Moral Argument for the existence of God", inline=False)
+    embed1d.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1d.set_footer(text="Library | Philosophy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1d)
+
+@client.command()
+async def kalam(ctx):
+    embed1e = discord.Embed(title="The Kalam Cosmological Argument", url="https://www.reasonablefaith.org/images/uploads/The_Kalam_Cosmological_Argument.pdf", color=0x00008b)
+    embed1e.add_field(name="**1.**", value="Whatever begins to exist has a cause.", inline=False)
+    embed1e.add_field(name="**2.**", value="The universe began to exist.", inline=False)
+    embed1e.add_field(name="**3.**", value="The Universe had a cause.",  inline=False)
+    embed1e.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1e.set_footer(text="Library | Philosophy | The Kalam Cosmological Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1e)
+
+@client.command()
+async def moral(ctx):
+   embed1g = discord.Embed(title="The Moral Argument for the existence of God", url="https://www.apologeticspress.org/apPubPage.aspx?pub=1&issue=1001", color=0x00008b)
+   embed1g.add_field(name="**1.**", value="If God does not exist, then objective moral values do not exist.", inline=False)
+   embed1g.add_field(name="**2.**", value="Objective moral values exist.", inline=False)
+   embed1g.add_field(name="**3.**", value="God exists.", inline=False)
+   embed1g.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1g.set_footer(text="Library | Philosophy | Moral Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   await ctx.send(embed=embed1g)
+
+@client.command()
+async def ontological(ctx):
+    embed1f = discord.Embed(title="The Ontological Argument", url="https://www.allaboutphilosophy.org/ontological-argument.htm", color=0x00008b)
+    embed1f.add_field(name="**1.**", value="A being has *maximal excellence* in a given possible world *W* if and only if it is omnipotent, omniscient and wholly good in *W*; and", inline=False)
+    embed1f.add_field(name="**2.**", value="A being has *maximal greatness* if it has maximal excellence in every possible world.", inline=False)
+    embed1f.add_field(name="**3.**", value="It is possible that there is a being that has maximal greatness. (Premise)", inline=False)
+    embed1f.add_field(name="**4.**", value="Therefore, possibly, it is necessarily true that an omniscient, omnipotent, and perfectly good being exists.", inline=False)
+    embed1f.add_field(name="**5.**", value="Therefore, (by axiom S5) it is necessarily true that an omniscient, omnipotent, and perfectly good being exists.", inline=False)
+    embed1f.add_field(name="**6.**", value="Therefore, an omniscient, omnipotent and perfectly good being exists.", inline=False)
+    embed1f.set_footer(text="Library | Philosophy | The Ontological Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1f.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1f)
 
 @client.command()
 async def salvation(ctx):
@@ -155,9 +311,9 @@ async def ORyt(ctx):
 @client.command()
 async def luther(ctx):
   await ctx.send("https://images-ext-2.discordapp.net/external/UD6d7GGuAkJdbRoEDoDSEXdFOnS4dHey2V2JX73fOUU/%3Fv%3D1/https/cdn.discordapp.com/emojis/855070947870638090.png")
+
+
 #creed
-
-
 
 @client.command()
 async def creeds(ctx):
@@ -184,7 +340,7 @@ async def creeds(ctx):
 
 @client.command()
 async def nicene(ctx):
-    embed10 = discord.Embed(Title="Nicene Creeds",
+    embed10 = discord.Embed(title="Nicene Creeds",
                             Description="Nicene Creeds",
                             color=discord.Color.random())
     embed10.add_field(name="Nicene Creed of 325",
@@ -198,9 +354,8 @@ async def nicene(ctx):
 
 @client.command()
 async def nft(ctx):
-    embed13 = discord.Embed(Title="The 95 theses of Martin Luther",
+    embed13 = discord.Embed(title="The 95 theses of Martin Luther",
                             color=0x548b54)
-    embed13.add_field(name="The Ninety-five Theses of Martin Luther Commands", value="-----", inline=False)
     embed13.add_field(name="`)nft1`",
                       value="the 95 theses of Martin Luther, page 1", inline=False)
     embed13.add_field(name="`)nft2`",
@@ -214,8 +369,8 @@ async def nft(ctx):
 
 @client.command()
 async def nft1(ctx):
-    embed11 = discord.Embed(Title="95 theses",
-                            description="The 95 Theses of Martin Luther - Page 1",
+    embed11 = discord.Embed(title="95 Theses Of Martin Luther - Page 1",
+                            Description="The 95 Theses of Martin Luther - Page 1",
                             color=0x548b54)
     embed11.add_field(
         name="-",
@@ -255,9 +410,9 @@ async def nft1(ctx):
 
 @client.command()
 async def nft2(ctx):
-  embed14 = discord.Embed(Title="95 Theses of Martin Luther - Page 2", color=0x548b54)
+  embed14 = discord.Embed(title="95 Theses of Martin Luther - Page 2", color=0x548b54)
   embed14.add_field(
-        name="The 95 Theses of Martin Luther - Page 2",
+        name="-----",
         value=
         "**30.** *No one is sure that his own contrition is sincere; much less that he has attained full remission.* **31.** *Rare as is the man that is truly penitent, so rare is also the man who truly buys indulgences, i.e., such men are most rare.* **32.** *They will be condemned eternally, together with their teachers, who believe themselves sure of their salvation because they have letters of pardon.* **33.** *Men must be on their guard against those who say that the pope's pardons are that inestimable gift of God by which man is reconciled to Him;* **34.** *For these `graces of pardon` concern only the penalties of sacramental satisfaction, and these are appointed by man.* **35.** *They preach no Christian doctrine who teach that contrition is not necessary in those who intend to buy souls out of purgatory or to buy confessionalia.* **36.** *Every truly repentant Christian has a right to full remission of penalty and guilt, even without letters of pardon.*", inline=False
     )
@@ -272,7 +427,7 @@ async def nft2(ctx):
 
 @client.command()
 async def nft3(ctx):
-  embed15 = discord.Embed(title="The Ninety-Five Theses of Martin Luther - Page 3", description="     ", color=0x548b54)
+  embed15 = discord.Embed(title="The Ninety-Five Theses of Martin Luther - Page 3", color=0x548b54)
   embed15.add_field(name="--", value="**66.** *The treasures of the indulgences are nets with which they now fish for the riches of men.* **67.** *The indulgences which the preachers cry as the `greatest graces` are known to be truly such, in so far as they promote gain.* **68.** *Yet they are in truth the very smallest graces compared with the grace of God and the piety of the Cross.* **69.** *Bishops and curates are bound to admit the commissaries of apostolic pardons, with all reverence.* **70.** *But still more are they bound to strain all their eyes and attend with all their ears, lest these men preach their own dreams instead of the commission of the pope.* **71.** *He who speaks against the truth of apostolic pardons, let him be anathema and accursed!* **72.** *But he who guards against the lust and license of the pardon-preachers, let him be blessed!* **73.** *The pope justly thunders against those who, by any art, contrive the injury of the traffic in pardons.*", inline=False)
   embed15.add_field(name="-----", value="**74.** *But much more does he intend to thunder against those who use the pretext of pardons to contrive the injury of holy love and truth.* **75.** *To think the papal pardons so great that they could absolve a man even if he had committed an impossible sin and violated the Mother of God—this is madness.* **76.** *We say, on the contrary, that the papal pardons are not able to remove the very least of venial sins, so far as its guilt is concerned.* **77.** *It is said that even St. Peter, if he were now Pope, could not bestow greater graces; this is blasphemy against St. Peter and against the pope.* **78.** *We say, on the contrary, that even the present pope, and any pope at all, has greater graces at his disposal; to wit, the Gospel, powers, gifts of healing, etc., as it is written in I. Corinthians xii.* **79.** *To say that the cross, emblazoned with the papal arms, which is set up [by the preachers of indulgences], is of equal worth with the Cross of Christ, is blasphemy.*", inline=False)
   embed15.add_field(name="-----", value="**80.** *The bishops, curates and theologians who allow such talk to be spread among the people, will have an account to render.* **81.** *This unbridled preaching of pardons makes it no easy matter, even for learned men, to rescue the reverence due to the pope from slander, or even from the shrewd questionings of the laity.* **82.** *To wit:—`Why does not the pope empty purgatory, for the sake of holy love and of the dire need of the souls that are there, if he redeems an infinite number of souls for the sake of miserable money with which to build a Church? The former reasons would be most just; the latter is most trivial.`* **83.** *Again:—`Why are mortuary and anniversary masses for the dead continued, and why does he not return or permit the withdrawal of the endowments founded on their behalf, since it is wrong to pray for the redeemed?`*", inline=False)
@@ -286,7 +441,6 @@ async def nft3(ctx):
 @client.command()
 async def nicene1(ctx):
     embed5 = discord.Embed(title="The Nicene Creed 325 AD",
-                           description="   ",
                            color=discord.Color.random())
     embed5.add_field(
         name="-----",
@@ -321,11 +475,10 @@ async def nicene2(ctx):
 
 @client.command()
 async def athanasian(ctx):
-    embed8 = discord.Embed(Title="The Athanasian Creed",
-                           description="     ",
+    embed8 = discord.Embed(title="The Athanasian Creed",
                            color=discord.Color.random())
     embed8.add_field(
-        name="**The Athanasian Creed**",
+        name="-----",
         value=
         "Whosoever will be saved, before all things it is necessary that he hold the catholic faith; Which faith except every one do keep whole and undefiled, without doubt he shall perish everlastingly. And the catholic faith is this: That we worship one God in Trinity, and Trinity in Unity; Neither confounding the persons, nor dividing the substance. For there is one Person of the Father, another of the Son and another of the Holy Spirit. But the Godhead of the Father, of the Son, and of the Holy Spirit is all one, the glory equal, the majesty co-eternal. Such as the Father is, such is the Son and such is the Holy Spirit. The Father uncreated, the Son uncreated, and the Holy Spirit uncreated. The Father incomprehensible, the Son incomprehensible, and the Holy Spirit incomprehensible. The Father eternal, the Son eternal, and the Holy Spirit eternal. And yet they are not three eternals, but one eternal. As also there are not three uncreated nor three incomprehensibles, but one uncreated and one incomprehensible.",
         inline=False)
@@ -437,9 +590,9 @@ async def about(ctx):
         description=
         "This is a brand new bot coded by <@751556186548994149>. To learn more about this bot, dm him, and he will get to you as soon as he can! Also, we would appreciate it if you joined the support server [here.](https://discord.gg/z2RR4EvtaZ)",
         color=0x000033)
-    embed2.add_field(name="Bot Version:", value="v. 1.2.0 Beta", inline=False)
+    embed2.add_field(name="Bot Version:", value="v. 1.3.1 Beta", inline=False)
     embed2.add_field(name="Date Version was Released:",
-                     value="8/25/2021",
+                     value="9/17/2021",
                      inline=False)
     embed2.set_footer(text="Misc Commands | About", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed2)
@@ -453,13 +606,13 @@ async def ping(ctx):
     embedVar.add_field(name="Latency",
                        value=str(round(client.latency * 1000)),
                        inline=False)
-    embedVar.add_field(name="Support Server",
-                       value="https://discord.gg/z2RR4EvtaZ",
+    embedVar.add_field(name="-----",
+                       value="[Support Server](https://discord.gg/z2RR4EvtaZ)",
                        inline=False)
     embedVar.add_field(name="Owners and Developers",
                        value="<@751556186548994149>",
                        inline=False)
-    embedVar.add_field(name="Bot Version:", value="v.1.2.0", inline=False)
+    embedVar.add_field(name="Bot Version:", value="v.1.3.1", inline=False)
     embedVar.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embedVar.set_footer(text="Misc Commands | Ping", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embedVar)

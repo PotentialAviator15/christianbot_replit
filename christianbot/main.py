@@ -1,3 +1,4 @@
+from collections import namedtuple
 import discord
 import os
 import random
@@ -9,6 +10,15 @@ client = commands.Bot(command_prefix=')')
 client.remove_command("help")
 
 
+#EMBED TEMPLATES!!!
+
+#commandsmenutemplate
+#    #embed.add_field(name="``", value="", inline=False)
+#footertemplate
+#   #embed.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+#thumbnail template
+#embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+
 
 #Status
 @client.event
@@ -18,7 +28,7 @@ async def ch_pr():
     statuses = [
         "Discipleship | )help",
         f" in {len(client.guilds)} servers",
-        "Version 1.2.0 BETA",
+        "Version 1.3.2 BETA",
         "Check my bio",
     ]
 
@@ -91,10 +101,10 @@ async def library(ctx):
                       value="gives you information about salvation")
     embed12.add_field(name="`)nft`", value="The __N__inety-__F__ive __T__heses of Martin Luther", inline=False)
     embed12.add_field(name="`)churchfathers`", value="[Coming Soon]", inline=False)
-    embed12.add_field(name="`)doctrines`", value="Coming soon", inline=False)
+    embed12.add_field(name="`)doctrines`", value="Currently being worked on", inline=False)
     embed12.add_field(name="`)OR`", value="__O__nline __R__esources [Currently adding more sites]", inline=False)
-    embed12.add_field(name="`)fallacies`", value="Gives you the ten commandments of logic in an image", inline=False)
-    embed12.add_field(name="`)philosophy`", value="Will be fixed soon", inline=False)
+    embed12.add_field(name="`)fallacies`", value="Gives you all the commands for most fallacies.", inline=False)
+    embed12.add_field(name="`)philosophy`", value="Currently being worked on, will be complete soon :). This command works for now.", inline=False)
     embed12.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.britanniapine.co.uk%2Fcontent%2Fimages%2Fproducts%2F312%2Fmain%2F..OpusSBC_SmallBookcase_Living.jpg&f=1&nofb=1")
     embed12.set_footer(text="Library", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed12)
@@ -135,14 +145,6 @@ async def fallacies(ctx):
     await ctx.send(embed=embed1l)
 
 
-#EMBED TEMPLATES!!!
-
-#commandsmenutemplate
-#    #embed.add_field(name="``", value="", inline=False)
-#footertemplate
-#   #embed.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-#thumbnail template
-#embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
 
 @client.command()
 async def strawman(ctx):
@@ -225,6 +227,9 @@ async def philosophy(ctx):
     embed1d.add_field(name="`)kalam`", value="Gives you the Kalam Cosmological Argument in it's most simplest terms.", inline=False)
     embed1d.add_field(name="`)ontological`", value="Gives you the Ontological argument in it's nost simplest form")
     embed1d.add_field(name="`)moral`", value="Gived you the Moral Argument for the existence of God", inline=False)
+    embed1d.add_field(name="`)contingency`", value="Gives you the Contigency argument", inline=False)
+    embed1d.add_field(name="`)miraclesarg`", value="Gives you the argument from miracles", inline=False)
+    embed1d.add_field(name="`)design`", value="gives you a Design argument for the existence of God", inline=False)
     embed1d.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1d.set_footer(text="Library | Philosophy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1d)
@@ -263,6 +268,77 @@ async def ontological(ctx):
     await ctx.send(embed=embed1f)
 
 @client.command()
+async def design(ctx):
+    embed1v = discord.Embed(title="The Design Argument (this is one of many design arguments)", color=0x00008b)
+    embed1v.add_field(name="**1.**", value="If God does not exis, the applicability of math to the physical world is just a coincidence.", inline=False)
+    embed1v.add_field(name="**2.**", value="The applicability of math to the physical world is not just a coincidence.", inline=False)
+    embed1v.add_field(name="**3.**", value="Therefore, God exists.", inline=False)
+    embed1v.set_footer(text="Library | Philosophy | The Design Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1v.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send (embed=embed1v)
+
+
+@client.command()
+async def contingency(ctx):
+    embed1w = discord.Embed(title="The Contingency Argument", color=0x00008b)
+    embed1w.add_field(name="**1.**", value="Everything has a reason why it exists -- either by necessity of its own nature, or because it was caused by someone else.", inline=False)
+    embed1w.add_field(name="**2.**", value="If the universe has a reason why it exists it is that God caused it to exist.", inline=False)
+    embed1w.add_field(name="**3.**", value="The universe exists.", inline=False)
+    embed1w.add_field(name="**4.**", value="Therefore, God caused it to exist.", inline=False)
+    embed1w.add_field(name="**5.**", value="Therefore, God exists.", inline=False)
+    embed1w.set_footer(text="Library | Philosophy | The Contingency Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1w.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1w)
+
+@client.command()
+async def miraclesarg(ctx):
+    embed1x = discord.Embed(title="Argument From Miracles", color=0x00008b)
+    embed1x.add_field(name="**1.**", value="There are several solid facts concerning the fate of Jesus: His death by crucifixion, the empty tomb, His appearances after having died, and the disciples' genuine belief in His resurrection.", inline=False)
+    embed1x.add_field(name="**2.**", value="these facts are best explained by the thesis `God raised Jesus from the dead.`", inline=False)
+    embed1x.add_field(name="**3.**", value="If God raised Jesus from the dead, then the God revealed by Jesus exists.", inline=False)
+    embed1x.add_field(name="**4.**", value="Therefore, the God revealed by Jesus exists.", inline=False)
+    embed1x.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1x.set_footer(text="Library | Philosophy | The Argument from Miracles", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1x)
+
+#doctrinescmds
+
+
+@client.command()
+async def doctrines(ctx):
+    embed1s = discord.Embed(title="Doctrines", description="Common doctrines for the Christian Faith - Commands", color=0xffcccb)
+    embed1s.add_field(name="`)trinity`", value="Gives you the doctrine of the Trinity. This is being expanded at the moment.", inline=False)
+    embed1s.add_field(name="`)solas`", value="Gives you the Five solas of the Christian Faith.", inline=False)
+    embed1s.add_field(name="`)covtheo`", value="Coming soon", inline=False)
+    await ctx.send(embed=embed1s)
+
+@client.command()
+async def trinity(ctx):
+    embed1t = discord.Embed(title="The Doctrine of the Trinity", description="The doctrine of the Trinity has been ridiculed, poked at, and strawmanned long enough. That is why I am making this command. The Trinity is biblical, logical, and coherent, and strawmans will no longer be tolerated. The Trinity is as follows:", color=0x07185a9)
+    embed1t.add_field(name="**1.** ", value="One God in three persons, inseparable, co-equal, and co-eternal. They are of the same being; of the same Mind, the same agenda. They communicate with each other seamlessly; they are one being. Therefore, Let us refer to this triune being as God, and not strawman it to make it mean something it doesn't. It is NOT three gods. That is Polygamy. It is NOT modalism, and that is a heresy.", inline=False)
+    embed1t.add_field(name="**2.**", value="Jesus is Co-equal with the Father, and is co-equal because he forgives sins that were indebted towards the Father. Jesus claimed to forgive sins. How can he have forgiven sins without being God? Even the Pharisees recognized this. Yet unitarians still deny that Jesus is God.", inline=False)
+    embed1t.add_field(name="**3.**", value="The Holy Spirit is co-equal with the Father. Genesis 1:2 says that `The Spirit of God hovered over the waters`. How do we know that this wasn't the Breath of God? Well, for one, if it was the breath of God, we would attribute his breath as air, and that limits God to a specific space. Therefore, to say that it was God's breath is limiting God, and marking him as a finite being.", inline=False)
+    embed1t.add_field(name="**4.**", value="Jesus is God incarnate, and cannot be God coming down as the Father, as then we would be limiting God (the Father) to a specific human body, and therefore God (the Father) would be finite. This, of course, is not true. God (the Father) is infinite, or he would not be able to create the earth. He outside of space, time, and matter.")
+    embed1t.set_footer(text="Library | Doctrines | Trinity", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1t.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1t)
+
+@client.command()
+async def solas(ctx): 
+    embed1u = discord.Embed(title="The Five Solas", color=discord.Color.random())
+    embed1u.add_field(name="**1.** | Sola Gracia", value="This Sola states that **Grace Alone** is what you are saved by. Uncoditional grace, not based upon Human merit and works. Romans 3:10-12; Ephesians 2:8-9", inline=False)
+    embed1u.add_field(name="**2.** | Sola Fide", value="This Sola states that **Faith Alone** is the vehicle that saves you. It is what sets Christianity apart from all other religions. It is belief in what God did, instead of hoping what you do will get you to heaven. Romans 4:4-5; Romans 5:8-9", inline=False)
+    embed1u.add_field(name="**3.** | Sola Christus", value="This Sola states that **Christ Alone** is the way to salvation. John 14:6; Romans 10:9; Acts 4:12")
+    embed1u.add_field(name="**4.** | Sola Scriptura", value="This Sola states that **Scripture Alone** is the inerrant word of God. 2 Peter 1:21; 2 Timothy 3:16-17")
+    embed1u.add_field(name="**5.** | Soli Deo Gloria", value="This Sola states that we must put **Glory to God Alone**. Glory belongs to him, as he is the only one worthy of it all. Titus 3:4-5; John 6:44; 1 Corinthians 10:31", inline=False)
+    embed1u.set_footer(text="Library | Doctrines | The Five Solas", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1u.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1u)
+
+#@client.command()
+#async def covtheo
+
+@client.command()
 async def salvation(ctx):
     embed = discord.Embed(
         title="What Must I Do To Be Saved?",
@@ -286,6 +362,7 @@ async def OR(ctx):
   embed16.set_footer(text="Library | Online Resources", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
   await ctx.send(embed=embed16)
 
+
 @client.command()
 async def ORws(ctx):
   embed20 = discord.Embed(title="Online Resources", color=0xffffff)
@@ -294,6 +371,7 @@ async def ORws(ctx):
   embed20.add_field(name="To Be Continued", value="To talk more with fellow members, and access the Bot Developer's blog, click [here.](https://sjcoden.wordpress.com/)", inline=False)
   embed20.set_footer(text="Library | Online Resources | Websites", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
   await ctx.send(embed=embed20)
+
 
 @client.command()
 async def ORyt(ctx):
@@ -334,6 +412,7 @@ async def creeds(ctx):
     embed4.add_field(name="`)chalcedonian`",
                      value="The Chalcedonian Definition")
     embed4.set_footer(text="Library | Creeds", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed4.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed4)
 
 
@@ -590,9 +669,9 @@ async def about(ctx):
         description=
         "This is a brand new bot coded by <@751556186548994149>. To learn more about this bot, dm him, and he will get to you as soon as he can! Also, we would appreciate it if you joined the support server [here.](https://discord.gg/z2RR4EvtaZ)",
         color=0x000033)
-    embed2.add_field(name="Bot Version:", value="v. 1.3.1 Beta", inline=False)
+    embed2.add_field(name="Bot Version:", value="v. 1.3.2 Beta", inline=False)
     embed2.add_field(name="Date Version was Released:",
-                     value="9/17/2021",
+                     value="9/20/2021",
                      inline=False)
     embed2.set_footer(text="Misc Commands | About", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed2)
@@ -612,7 +691,7 @@ async def ping(ctx):
     embedVar.add_field(name="Owners and Developers",
                        value="<@751556186548994149>",
                        inline=False)
-    embedVar.add_field(name="Bot Version:", value="v.1.3.1", inline=False)
+    embedVar.add_field(name="Bot Version:", value="v.1.3.2", inline=False)
     embedVar.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embedVar.set_footer(text="Misc Commands | Ping", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embedVar)

@@ -9,7 +9,7 @@ from keep_alive import keep_alive
 client = commands.Bot(command_prefix=')')
 client.remove_command("help")
 
-
+######################################
 #EMBED TEMPLATES!!!
 
 #commandsmenutemplate
@@ -18,9 +18,10 @@ client.remove_command("help")
 #   #embed.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
 #thumbnail template
 #embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-
+######################################
 
 #Status
+
 @client.event
 async def ch_pr():
     await client.wait_until_ready()
@@ -44,6 +45,8 @@ async def ch_pr():
 client.loop.create_task(ch_pr())
 
 
+
+
 #moderation cmds
 
 
@@ -51,12 +54,13 @@ client.loop.create_task(ch_pr())
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, user: discord.Member, *, reason=None):
     await user.ban(reason=reason)
-    await ctx.send(f"{user} has been bannned successfully")
+    await ctx.send(f"""{user} has been bannned successfully!! Be sure you right click on the person's @user and select `Copy ID` so you can unban them! 
+    **Note:** If you do not have ***Developer Mode*** turned on in your Discord App settings, you will not see this option.""")
 
 
 #cmds and hlp menus
 
-@client.command()
+@client.command(aliases=['h'])
 async def help(ctx):
     embed1 = discord.Embed(title="Main Menu",
                            description="    ",
@@ -86,9 +90,10 @@ async def help(ctx):
     embed1.set_footer(text="Help Menu", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1)
 
+
 #library
 
-@client.command()
+@client.command(aliases=['l'])
 async def library(ctx):
     embed12 = discord.Embed(title="Library", color=0xcdaa7d)
     embed12.add_field(name="`)creeds`",
@@ -111,14 +116,14 @@ async def library(ctx):
 
 #fallacies
 
-@client.command()
+@client.command(aliases=['fimg', 'Fallacy'])
 async def fallacy(ctx):
   embed17 = discord.Embed(title="The Ten Fallacies", description="The Ten Fallacies You Should Never Use", color=discord.Color.random())
   embed17.set_image(url="https://media.discordapp.net/attachments/880178538035159050/880639730612568084/FB_IMG_1630031249162.jpg?width=514&height=514")
   embed17.set_footer(text="Library | Fallacies | Image", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
   await ctx.send(embed=embed17)
 
-@client.command()
+@client.command(aliases=['adh', 'Adhominem'])
 async def adhominem(ctx):
     embed1h = discord.Embed(title="Ad Hominem - Fallacy", description="1. Appealing to feelings or prejudices rather than intellect", url="https://www.merriam-webster.com/dictionary/ad%20hominem", color=0x00008b)
     embed1h.add_field(name="2.", value="marked by or being an attack on an opponent's character rather than by an answer to the contentions made")
@@ -126,7 +131,7 @@ async def adhominem(ctx):
     embed1h.set_footer(text="Library | Fallacies | Ad Hominem", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1h)
 
-@client.command()
+@client.command(aliases=['f'])
 async def fallacies(ctx):
     embed1l= discord.Embed(title="Fallacy Commands", color=0x00007b)
     embed1l.add_field(name="`)fallacy`", value="Gives you the image of fallacies", inline=False)
@@ -140,20 +145,34 @@ async def fallacies(ctx):
     embed1l.add_field(name="`)bandwagon`", value="Gives you the Bandwagon Fallacy", inline=False)
     embed1l.add_field(name="`)nonsequitur`", value="Gives you the Non Sequitur fallacy", inline=False)
     embed1l.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=False)
+    embed1l.add_field(name="`)atauthority`", value="Gives you the Appeal To Authority Fallacy", inline=False)
+    embed1l.add_field(name="`)shotgun`", value="Gives you the shotgun fallacy", inline=False)
     embed1l.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1l.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1l)
 
+@client.command(aliases=['appealtoauthority', 'ata', 'appealtoa', 'Atauthority'])
+async def atauthority(ctx):
+    embed1z = discord.Embed(title="Appeal to Authority - Fallacy", description="A person says that John Doe said X, therefore X is true. This is the appeal to authority fallacy in its most simpelist form.", url="https://www.thoughtco.com/logical-fallacies-appeal-to-authority-250336", color=0x00008b)
+    embed1z.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1z.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    await ctx.send(embed=embed1z)
+
+@client.command(aliases=['shot', 'Shotgun'])
+async def shotgun(ctx):
+    embed2a = discord.Embed(title="Shotgun [Argument style] - Fallacy", description="The use of multiple arguments at a time in order to overwhelm the opponent.", color=0x00008b)
+    embed2a.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed2a.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
 
 
-@client.command()
+@client.command(aliases=['sm', 'Strawman'])
 async def strawman(ctx):
     embed1i = discord.Embed(title="Straw man - Fallacy", description="The straw man is a fallacy in which an opponent's argument is overstated or misrepresented in order to be more easily attacked or refuted.", url="https://www.thoughtco.com/straw-man-fallacy-1692144", color=0x00008b)
     embed1i.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1i.set_footer(text="Library | Fallacies | Strawman Fallacy")
     await ctx.send(embed=embed1i)
 
-@client.command()
+@client.command(aliases=['beggingthequestion', 'beggingtheq', 'bthequestion', 'btquestion', 'Begging'])
 async def begging(ctx): 
     embed1j = discord.Embed(title="Begging The Question - Fallacy", description="This fallacy can also be known as a circular argument. Here are some examples.", url="https://www.thoughtco.com/begging-the-question-petitio-principii-250337", color=0x00008b)
     embed1j.add_field(name="**1.**", value="A is true because A is true.", inline=False)
@@ -170,49 +189,49 @@ async def begging(ctx):
     await ctx.semd(embed=embed1j)
 
 
-@client.command()
+@client.command(aliases=['ph', 'phoc'])
 async def posthoc(ctx):
     embed1m = discord.Embed(title="Post Hoc/False Cause - Fallacy", description="Insisting that two things or events are correlated without any evidence to support it. In essense, correlation does not equal causation.", url="https://www.thoughtco.com/post-hoc-fallacy-1691650", color=0x00008b)
     embed1m.set_footer(text="Library | Fallacies | Post Hoc/False Cause", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1m.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1m)
 
-client.command()
+@client.command(aliases=['fd', 'FalseDichotomy', 'FalseD', 'Falsedichotomy'])
 async def falsedichotomy(ctx):
     embed1n = discord.Embed(title="False Dichotomy - Fallacy", description="When two options are presented, and are either considered two complete opposites when they aren't necessarily, or when you single out two options as the only options.", color=0x00008b)
     embed1n.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1n.set_footer(text="Library | Fallacies | False Dichotomy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1n)
 
-@client.command()
+@client.command(aliases=['adi', 'aignorantiam', 'Adignorantiam'])
 async def adignorantiam(ctx):
    embed1o = discord.Embed(title="Ad Ignorantiam - Fallacy", description="An argument from ignorance. When someone argues for/against something because there is not evidence to the contrary.", url="https://carm.org/dictionary/argumentum-ad-ignorantiam/", color=0x00008b)
    embed1o.set_footer(text="Library | Fallacies | Ad Ignorantiam", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
    embed1o.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
    await ctx.send(embed=embed1o)
 
-@client.command()
+@client.command(aliases=['hastygeneralization', 'hastyg', 'Generalizing'])
 async def generalizing(ctx):
     embed1k = discord.Embed(title="Hasty Generalization - Fallacy", description="A hasty Generalization is a conclusion that is not logically justified by sufficient (or sufficiently unbiased) evidence.", url="https://www.thoughtco.com/hasty-generalization-fallacy-1690919", color=0x00008b)
     embed1k.set_footer(text="Library | Fallacies | Hasty Generalization", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1k.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1k)
 
-@client.command()
+@client.command(aliases=['bw', 'Bandwagon'])
 async def bandwagon(ctx):
     embed1p = discord.Embed(title="Bandwagon - Fallacy", description="When something is argued for, based on its popularity. I.e. *Twitter is so popular! It must be a good platform.* ", color=0x00008b)
     embed1p.set_footer(text="Library | Fallacies | Bandwagon Fallacy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1p.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1p)
 
-@client.command()
+@client.command(aliases=['ns', 'nons', 'Non-Sequitur', 'Nonsequitur'])
 async def nonsequitur(ctx):
     embed1q = discord.Embed(title="Non sequitur - Fallacy", description="When *this* follows *that* when there is no logic to reach that conclusion, or when there is a conclusion reached, and there is nothing logically there to support the conclusion.", color=0x00008b)
     embed1q.set_footer(text="Library | Fallacies | Non Sequitur", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     embed1q.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1q)
 
-@client.command()
+@client.command(aliases=['burdenofproofreversal', 'burdenofproofr'])
 async def bopr(ctx):
    embed1r = discord.Embed(title="Burden of Proof Reversal - Fallacy", description="making a claim that needs justification, and then demanding the opponent to provide burden of proof for the opposite claim.", color=0x00008b)
    embed1r.set_footer(text="Library | Fallacies | Burden of Proof Reversal", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
@@ -221,7 +240,7 @@ async def bopr(ctx):
 
 #philosophycmds
 
-@client.command()
+@client.command(aliases=['phil'])
 async def philosophy(ctx):
     embed1d = discord.Embed(title="Philosophy", color=0xffffff)
     embed1d.add_field(name="`)kalam`", value="Gives you the Kalam Cosmological Argument in it's most simplest terms.", inline=False)
@@ -234,7 +253,7 @@ async def philosophy(ctx):
     embed1d.set_footer(text="Library | Philosophy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1d)
 
-@client.command()
+@client.command(aliases=['kalamcosmological', 'kalamcosmo', 'Kalam'])
 async def kalam(ctx):
     embed1e = discord.Embed(title="The Kalam Cosmological Argument", url="https://www.reasonablefaith.org/images/uploads/The_Kalam_Cosmological_Argument.pdf", color=0x00008b)
     embed1e.add_field(name="**1.**", value="Whatever begins to exist has a cause.", inline=False)
@@ -254,7 +273,7 @@ async def moral(ctx):
    embed1g.set_footer(text="Library | Philosophy | Moral Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
    await ctx.send(embed=embed1g)
 
-@client.command()
+@client.command('Ontological', 'onto', 'Ontologicalargument')
 async def ontological(ctx):
     embed1f = discord.Embed(title="The Ontological Argument", url="https://www.allaboutphilosophy.org/ontological-argument.htm", color=0x00008b)
     embed1f.add_field(name="**1.**", value="A being has *maximal excellence* in a given possible world *W* if and only if it is omnipotent, omniscient and wholly good in *W*; and", inline=False)
@@ -267,10 +286,10 @@ async def ontological(ctx):
     embed1f.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1f)
 
-@client.command()
+@client.command('Design', 'designarg')
 async def design(ctx):
     embed1v = discord.Embed(title="The Design Argument (this is one of many design arguments)", color=0x00008b)
-    embed1v.add_field(name="**1.**", value="If God does not exis, the applicability of math to the physical world is just a coincidence.", inline=False)
+    embed1v.add_field(name="**1.**", value="If God does not exist, the applicability of math to the physical world is just a coincidence.", inline=False)
     embed1v.add_field(name="**2.**", value="The applicability of math to the physical world is not just a coincidence.", inline=False)
     embed1v.add_field(name="**3.**", value="Therefore, God exists.", inline=False)
     embed1v.set_footer(text="Library | Philosophy | The Design Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
@@ -278,11 +297,11 @@ async def design(ctx):
     await ctx.send (embed=embed1v)
 
 
-@client.command()
+@client.command(aliases=['cont', 'Contingency'])
 async def contingency(ctx):
-    embed1w = discord.Embed(title="The Contingency Argument", color=0x00008b)
-    embed1w.add_field(name="**1.**", value="Everything has a reason why it exists -- either by necessity of its own nature, or because it was caused by someone else.", inline=False)
-    embed1w.add_field(name="**2.**", value="If the universe has a reason why it exists it is that God caused it to exist.", inline=False)
+    embed1w = discord.Embed(title="The Contingency Argument", url="https://crossexamined.org/contingency-argument-gods-existence/", color=0x00008b)
+    embed1w.add_field(name="**1.**", value="Everything that exists has an explanation of its existence (either in the necessity of its own nature or in an external cause).", inline=False)
+    embed1w.add_field(name="**2.**", value="If the universe has an explanation of its existence, that explanation is God.", inline=False)
     embed1w.add_field(name="**3.**", value="The universe exists.", inline=False)
     embed1w.add_field(name="**4.**", value="Therefore, God caused it to exist.", inline=False)
     embed1w.add_field(name="**5.**", value="Therefore, God exists.", inline=False)
@@ -290,7 +309,7 @@ async def contingency(ctx):
     embed1w.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1w)
 
-@client.command()
+@client.command(aliases=['mirarg', 'MiraclesArg', 'Miraclesarg'])
 async def miraclesarg(ctx):
     embed1x = discord.Embed(title="Argument From Miracles", color=0x00008b)
     embed1x.add_field(name="**1.**", value="There are several solid facts concerning the fate of Jesus: His death by crucifixion, the empty tomb, His appearances after having died, and the disciples' genuine belief in His resurrection.", inline=False)
@@ -304,7 +323,7 @@ async def miraclesarg(ctx):
 #doctrinescmds
 
 
-@client.command()
+@client.command(aliases=['docts', 'Doctrines'])
 async def doctrines(ctx):
     embed1s = discord.Embed(title="Doctrines", description="Common doctrines for the Christian Faith - Commands", color=0xffcccb)
     embed1s.add_field(name="`)trinity`", value="Gives you the doctrine of the Trinity. This is being expanded at the moment.", inline=False)
@@ -312,10 +331,12 @@ async def doctrines(ctx):
     embed1s.add_field(name="`)covtheo`", value="Coming soon", inline=False)
     await ctx.send(embed=embed1s)
 
-@client.command()
+
+
+@client.command(aliases=['trin', '3n1', 'Trinity'])
 async def trinity(ctx):
     embed1t = discord.Embed(title="The Doctrine of the Trinity", description="The doctrine of the Trinity has been ridiculed, poked at, and strawmanned long enough. That is why I am making this command. The Trinity is biblical, logical, and coherent, and strawmans will no longer be tolerated. The Trinity is as follows:", color=0x07185a9)
-    embed1t.add_field(name="**1.** ", value="One God in three persons, inseparable, co-equal, and co-eternal. They are of the same being; of the same Mind, the same agenda. They communicate with each other seamlessly; they are one being. Therefore, Let us refer to this triune being as God, and not strawman it to make it mean something it doesn't. It is NOT three gods. That is Polygamy. It is NOT modalism, and that is a heresy.", inline=False)
+    embed1t.add_field(name="**1.** ", value="One God in three persons, inseparable, co-equal, and co-eternal. They are of the same being; of the same Mind, the same agenda. They communicate with each other seamlessly; they are one being. Therefore, Let us refer to this triune being as God, and not strawman it to make it mean something it doesn't. It is NOT three gods. That is Polytheism, and Christians follow a Monotheistic God. It is NOT modalism, and that is a heresy.", inline=False)
     embed1t.add_field(name="**2.**", value="Jesus is Co-equal with the Father, and is co-equal because he forgives sins that were indebted towards the Father. Jesus claimed to forgive sins. How can he have forgiven sins without being God? Even the Pharisees recognized this. Yet unitarians still deny that Jesus is God.", inline=False)
     embed1t.add_field(name="**3.**", value="The Holy Spirit is co-equal with the Father. Genesis 1:2 says that `The Spirit of God hovered over the waters`. How do we know that this wasn't the Breath of God? Well, for one, if it was the breath of God, we would attribute his breath as air, and that limits God to a specific space. Therefore, to say that it was God's breath is limiting God, and marking him as a finite being.", inline=False)
     embed1t.add_field(name="**4.**", value="Jesus is God incarnate, and cannot be God coming down as the Father, as then we would be limiting God (the Father) to a specific human body, and therefore God (the Father) would be finite. This, of course, is not true. God (the Father) is infinite, or he would not be able to create the earth. He outside of space, time, and matter.")
@@ -323,7 +344,7 @@ async def trinity(ctx):
     embed1t.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed1t)
 
-@client.command()
+@client.command(aliases=['5solas', 'Solas'])
 async def solas(ctx): 
     embed1u = discord.Embed(title="The Five Solas", color=discord.Color.random())
     embed1u.add_field(name="**1.** | Sola Gracia", value="This Sola states that **Grace Alone** is what you are saved by. Uncoditional grace, not based upon Human merit and works. Romans 3:10-12; Ephesians 2:8-9", inline=False)
@@ -338,15 +359,20 @@ async def solas(ctx):
 #@client.command()
 #async def covtheo
 
+#churchfatherscmds
+
+@client.command()
+async def augustine(ctx):
+    embed1y = discord.Embed(title="St. Augustine of Hippo")
+
+
 @client.command()
 async def salvation(ctx):
     embed = discord.Embed(
         title="What Must I Do To Be Saved?",
-        description=
-        "This question was asked to one of the followers of Jesus Christ nearly 2000 years ago and is still just as important and relevant of a question for you today. Have you ever thought about this question? Do you know the answer to the question? I would like you to seriously consider this question today because your response will determine how you will live your life and where you will spend eternity after you die.  So please, read this page carefully in its entirety. **Here is how the follower of Jesus answered the question: “Believe in the Lord Jesus Christ, and you will be saved” (Acts 16:31).** It is a simple response, but what exactly does it mean to “believe in the Lord Jesus Christ”?  And from what do you need to be “saved”?", url="https://www.thechristianworldview.org/about-us-2/what-must-do-to-be-saved/",
+        description="",
         color=0xff4040)
-    embed.add_field(name="-- What Does It Mean to be Saved?", 
-    value="The Bible, which claims to be the inspired word of God (2 Timothy 3:16) and entirely truthful (John 17:17; Psalm 119:160), gives a straightforward answer to what you need to be saved from: you need to saved from God Himself. The Bible says that God created and sustains everything in the universe (Genesis 1:1; Job 38:1-41) … including you (Psalm 139:13-16). It is He who established the unchanging laws of nature and morality. It is He who has ultimate authority over His creation. It is He who desires for you to be in a right relationship with Him (1 Timothy 2:3-4). In addition to being the Creator, God has another title — Judge. He has established good and righteous laws for our benefit, but sadly you (and I and everyone else) have disobeyed His laws in one way or another: by lying, lusting, gossiping, slandering, envying, coveting, stealing, cheating, using God’s or Jesus’ name as a curse word, or loving someone or something more than God.", inline=False)
+    embed.add_field(name="-- What Does It Mean to be Saved?", )
     embed.add_field(name="To Learn More, Click This Link:", value="[Here](https://www.thechristianworldview.org/about-us-2/what-must-do-to-be-saved/)", inline=False)
     embed.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fman-praying-picture-id498338635%3Fk%3D6%26m%3D498338635%26s%3D170667a%26w%3D0%26h%3Djl6oJ5-f6MIR8e9odwIg_mAFt2udf8Ptv1Dyn9r4iYk%3D&f=1&nofb=1")
     embed.set_footer(text="Library | Salvation", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
@@ -624,6 +650,8 @@ async def yeshua(ctx):
     embed.set_footer(text="Library | Yeshua", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
     await ctx.send(embed=embed)
 
+
+
 @client.command()
 async def motivation(ctx):
     responses = [
@@ -701,4 +729,4 @@ token = os.environ.get("TOKEN")
 client.run(token)
 
 token = os.environ.get("TOKEN")
-client.run(token)
+client.run(token, reconnect = True, client = True)

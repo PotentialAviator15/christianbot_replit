@@ -12,7 +12,7 @@ app = Flask('')
 
 def home():
 
-    return "I'm online. Thank you for checking the official page of ChristianBot. This version of the bot was released 8/25/2021 "
+    return "I'm online. Thank you for checking the official page of ChristianBot. This version of the bot was released on 9/20/2021"
 
 
 

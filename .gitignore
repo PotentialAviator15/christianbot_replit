@@ -1,0 +1,6 @@
+
+*.json
+*.iml
+*.xml
+.vs/slnx.sqlite
+.vs/christianbot_/v17/.suo

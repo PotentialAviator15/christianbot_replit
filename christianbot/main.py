@@ -15,9 +15,9 @@ client.remove_command("help")
 #commandsmenutemplate
 #    #embed.add_field(name="``", value="", inline=False)
 #footertemplate
-#   #embed.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+#   #embed.set_footer(text="", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
 #thumbnail template
-#embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+#embed.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
 ######################################
 
 #Status
@@ -29,7 +29,7 @@ async def ch_pr():
     statuses = [
         "Discipleship | )help",
         f" in {len(client.guilds)} servers",
-        "Version 1.3.2 BETA",
+        "Version 1.4 BETA",
         "Check my bio",
     ]
 
@@ -54,7 +54,7 @@ client.loop.create_task(ch_pr())
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, user: discord.Member, *, reason=None):
     await user.ban(reason=reason)
-    await ctx.send(f"""{user} has been bannned successfully!! Be sure you right click on the person's @user and select `Copy ID` so you can unban them! 
+    await ctx.send(f"""{user} has been bannned successfully!! Be sure you right click on the person's @user and select `Copy ID` so you can unban them! \n
     **Note:** If you do not have ***Developer Mode*** turned on in your Discord App settings, you will not see this option.""")
 
 
@@ -86,8 +86,8 @@ async def help(ctx):
         value=
         "Gives you the bot's library and resource command list. This library is being updated as frequently as possible, so be sure to use it!",
         inline=False)
-    embed1.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1.set_footer(text="Help Menu", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1.set_footer(text="Help Menu", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1)
 
 
@@ -111,7 +111,7 @@ async def library(ctx):
     embed12.add_field(name="`)fallacies`", value="Gives you all the commands for most fallacies.", inline=False)
     embed12.add_field(name="`)philosophy`", value="Currently being worked on, will be complete soon :). This command works for now.", inline=False)
     embed12.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.britanniapine.co.uk%2Fcontent%2Fimages%2Fproducts%2F312%2Fmain%2F..OpusSBC_SmallBookcase_Living.jpg&f=1&nofb=1")
-    embed12.set_footer(text="Library", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed12.set_footer(text="Library", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed12)
 
 #fallacies
@@ -120,15 +120,15 @@ async def library(ctx):
 async def fallacy(ctx):
   embed17 = discord.Embed(title="The Ten Fallacies", description="The Ten Fallacies You Should Never Use", color=discord.Color.random())
   embed17.set_image(url="https://media.discordapp.net/attachments/880178538035159050/880639730612568084/FB_IMG_1630031249162.jpg?width=514&height=514")
-  embed17.set_footer(text="Library | Fallacies | Image", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  embed17.set_footer(text="Library | Fallacies | Image", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed17)
 
 @client.command(aliases=['adh', 'Adhominem'])
 async def adhominem(ctx):
     embed1h = discord.Embed(title="Ad Hominem - Fallacy", description="1. Appealing to feelings or prejudices rather than intellect", url="https://www.merriam-webster.com/dictionary/ad%20hominem", color=0x00008b)
     embed1h.add_field(name="2.", value="marked by or being an attack on an opponent's character rather than by an answer to the contentions made")
-    embed1h.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1h.set_footer(text="Library | Fallacies | Ad Hominem", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1h.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1h.set_footer(text="Library | Fallacies | Ad Hominem", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1h)
 
 @client.command(aliases=['f'])
@@ -147,95 +147,95 @@ async def fallacies(ctx):
     embed1l.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=False)
     embed1l.add_field(name="`)atauthority`", value="Gives you the Appeal To Authority Fallacy", inline=False)
     embed1l.add_field(name="`)shotgun`", value="Gives you the shotgun fallacy", inline=False)
-    embed1l.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1l.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1l.set_footer(text="Library | Fallacies", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1l.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1l)
 
 @client.command(aliases=['appealtoauthority', 'ata', 'appealtoa', 'Atauthority'])
 async def atauthority(ctx):
     embed1z = discord.Embed(title="Appeal to Authority - Fallacy", description="A person says that John Doe said X, therefore X is true. This is the appeal to authority fallacy in its most simpelist form.", url="https://www.thoughtco.com/logical-fallacies-appeal-to-authority-250336", color=0x00008b)
-    embed1z.set_footer(text="Library | Fallacies", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1z.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1z.set_footer(text="Library | Fallacies", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1z.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1z)
 
 @client.command(aliases=['shot', 'Shotgun'])
 async def shotgun(ctx):
     embed2a = discord.Embed(title="Shotgun [Argument style] - Fallacy", description="The use of multiple arguments at a time in order to overwhelm the opponent.", color=0x00008b)
-    embed2a.set_footer(text="", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed2a.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed2a.set_footer(text="", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed2a.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
 
 
 @client.command(aliases=['sm', 'Strawman'])
 async def strawman(ctx):
     embed1i = discord.Embed(title="Straw man - Fallacy", description="The straw man is a fallacy in which an opponent's argument is overstated or misrepresented in order to be more easily attacked or refuted.", url="https://www.thoughtco.com/straw-man-fallacy-1692144", color=0x00008b)
-    embed1i.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1i.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     embed1i.set_footer(text="Library | Fallacies | Strawman Fallacy")
     await ctx.send(embed=embed1i)
 
 @client.command(aliases=['beggingthequestion', 'beggingtheq', 'bthequestion', 'btquestion', 'Begging'])
-async def begging(ctx): 
+async def begging(ctx):
     embed1j = discord.Embed(title="Begging The Question - Fallacy", description="This fallacy can also be known as a circular argument. Here are some examples.", url="https://www.thoughtco.com/begging-the-question-petitio-principii-250337", color=0x00008b)
     embed1j.add_field(name="**1.**", value="A is true because A is true.", inline=False)
     embed1j.add_field(name="**2.**", value="You should drive on the right side of the road because that is what the law says, and the law is the law.", inline=False)
     embed1j.add_field(name="**3.**", value="Affirmative Action can never be fair or just. You cannot remedy one injustice by committing another.", inline=False)
     embed1j.add_field(name="**4.**", value="A is true because B is true, and B is true because A is true.", inline=False)
     embed1j.add_field(name="**5.**", value="A is true because B is true, and B is true because C is true, and C is true because A is true.", inline=False)
-    embed1j.add_field(name="**6.**", value="It says in the Qur'an that Allah exists. Since the Qur'an is Allah's word, and Allah never speaks falsely, then everything in the Qur'an must be true. Therfore, Allah must exist.", inline=False)
+    embed1j.add_field(name="**6.**", value="It says in the Qur'an that Allah exists. Since the Qur'an is Allah's word, and Allah never speaks falsely, then everything in the Qur'an must be true. Therefore, Allah must exist.", inline=False)
     embed1j.add_field(name="**7.**", value="The Qur'an is true because Allah exists, and Allah exists because the Qur'an says so.", inline=False)
     embed1j.add_field(name="**8.**", value="The universe has a beginning. Everything that has a beginning has a cause. Therefore, the universe has a cause called Allah.", inline=False)
     embed1j.add_field(name="**9.**", value="We know Allah exists because we can see the perfect order of his creation, an order which demonstrates supernatural intelligence in its design.", inline=False)
-    embed1j.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1j.set_footer(text="Library | Fallacies | Begging the Question", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1j.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1j.set_footer(text="Library | Fallacies | Begging the Question", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.semd(embed=embed1j)
 
 
 @client.command(aliases=['ph', 'phoc'])
 async def posthoc(ctx):
-    embed1m = discord.Embed(title="Post Hoc/False Cause - Fallacy", description="Insisting that two things or events are correlated without any evidence to support it. In essense, correlation does not equal causation.", url="https://www.thoughtco.com/post-hoc-fallacy-1691650", color=0x00008b)
-    embed1m.set_footer(text="Library | Fallacies | Post Hoc/False Cause", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1m.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1m = discord.Embed(title="Post Hoc/False Cause - Fallacy", description="Insisting that two things or events are correlated without any evidence to support it. In essence, correlation does not equal causation.", url="https://www.thoughtco.com/post-hoc-fallacy-1691650", color=0x00008b)
+    embed1m.set_footer(text="Library | Fallacies | Post Hoc/False Cause", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1m.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1m)
 
 @client.command(aliases=['fd', 'FalseDichotomy', 'FalseD', 'Falsedichotomy'])
 async def falsedichotomy(ctx):
     embed1n = discord.Embed(title="False Dichotomy - Fallacy", description="When two options are presented, and are either considered two complete opposites when they aren't necessarily, or when you single out two options as the only options.", color=0x00008b)
-    embed1n.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1n.set_footer(text="Library | Fallacies | False Dichotomy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1n.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1n.set_footer(text="Library | Fallacies | False Dichotomy", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1n)
 
 @client.command(aliases=['adi', 'aignorantiam', 'Adignorantiam'])
 async def adignorantiam(ctx):
    embed1o = discord.Embed(title="Ad Ignorantiam - Fallacy", description="An argument from ignorance. When someone argues for/against something because there is not evidence to the contrary.", url="https://carm.org/dictionary/argumentum-ad-ignorantiam/", color=0x00008b)
-   embed1o.set_footer(text="Library | Fallacies | Ad Ignorantiam", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-   embed1o.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1o.set_footer(text="Library | Fallacies | Ad Ignorantiam", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+   embed1o.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
    await ctx.send(embed=embed1o)
 
 @client.command(aliases=['hastygeneralization', 'hastyg', 'Generalizing'])
 async def generalizing(ctx):
     embed1k = discord.Embed(title="Hasty Generalization - Fallacy", description="A hasty Generalization is a conclusion that is not logically justified by sufficient (or sufficiently unbiased) evidence.", url="https://www.thoughtco.com/hasty-generalization-fallacy-1690919", color=0x00008b)
-    embed1k.set_footer(text="Library | Fallacies | Hasty Generalization", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1k.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1k.set_footer(text="Library | Fallacies | Hasty Generalization", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1k.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1k)
 
 @client.command(aliases=['bw', 'Bandwagon'])
 async def bandwagon(ctx):
     embed1p = discord.Embed(title="Bandwagon - Fallacy", description="When something is argued for, based on its popularity. I.e. *Twitter is so popular! It must be a good platform.* ", color=0x00008b)
-    embed1p.set_footer(text="Library | Fallacies | Bandwagon Fallacy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1p.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1p.set_footer(text="Library | Fallacies | Bandwagon Fallacy", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1p.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1p)
 
 @client.command(aliases=['ns', 'nons', 'Non-Sequitur', 'Nonsequitur'])
 async def nonsequitur(ctx):
     embed1q = discord.Embed(title="Non sequitur - Fallacy", description="When *this* follows *that* when there is no logic to reach that conclusion, or when there is a conclusion reached, and there is nothing logically there to support the conclusion.", color=0x00008b)
-    embed1q.set_footer(text="Library | Fallacies | Non Sequitur", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1q.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1q.set_footer(text="Library | Fallacies | Non Sequitur", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1q.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1q)
 
 @client.command(aliases=['burdenofproofreversal', 'burdenofproofr'])
 async def bopr(ctx):
    embed1r = discord.Embed(title="Burden of Proof Reversal - Fallacy", description="making a claim that needs justification, and then demanding the opponent to provide burden of proof for the opposite claim.", color=0x00008b)
-   embed1r.set_footer(text="Library | Fallacies | Burden of Proof Reversal", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-   embed1r.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1r.set_footer(text="Library | Fallacies | Burden of Proof Reversal", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+   embed1r.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
    await ctx.send(embed=embed1r)
 
 #philosophycmds
@@ -244,23 +244,23 @@ async def bopr(ctx):
 async def philosophy(ctx):
     embed1d = discord.Embed(title="Philosophy", color=0xffffff)
     embed1d.add_field(name="`)kalam`", value="Gives you the Kalam Cosmological Argument in it's most simplest terms.", inline=False)
-    embed1d.add_field(name="`)ontological`", value="Gives you the Ontological argument in it's nost simplest form")
-    embed1d.add_field(name="`)moral`", value="Gived you the Moral Argument for the existence of God", inline=False)
-    embed1d.add_field(name="`)contingency`", value="Gives you the Contigency argument", inline=False)
+    embed1d.add_field(name="`)ontological`", value="Gives you the Ontological argument in it's most simplest form")
+    embed1d.add_field(name="`)moral`", value="Gives you the Moral Argument for the existence of God", inline=False)
+    embed1d.add_field(name="`)contingency`", value="Gives you the Contingency argument", inline=False)
     embed1d.add_field(name="`)miraclesarg`", value="Gives you the argument from miracles", inline=False)
     embed1d.add_field(name="`)design`", value="gives you a Design argument for the existence of God", inline=False)
-    embed1d.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1d.set_footer(text="Library | Philosophy", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1d.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1d.set_footer(text="Library | Philosophy", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1d)
 
 @client.command(aliases=['kalamcosmological', 'kalamcosmo', 'Kalam'])
 async def kalam(ctx):
     embed1e = discord.Embed(title="The Kalam Cosmological Argument", url="https://www.reasonablefaith.org/images/uploads/The_Kalam_Cosmological_Argument.pdf", color=0x00008b)
-    embed1e.add_field(name="**1.**", value="Whatever begins to exist has a cause.", inline=False)
-    embed1e.add_field(name="**2.**", value="The universe began to exist.", inline=False)
-    embed1e.add_field(name="**3.**", value="The Universe had a cause.",  inline=False)
-    embed1e.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1e.set_footer(text="Library | Philosophy | The Kalam Cosmological Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1e.add_field(name="**1.**", value="All physical things have a preceding event in order for it to exist, which is known as a cause.", inline=False)
+    embed1e.add_field(name="**2.**", value="a. The universe is a physical thing \n b. The universe has a preceding event for it exist.", inline=False)
+    embed1e.add_field(name="**3.**", value="The universe has a cause.",  inline=False)
+    embed1e.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1e.set_footer(text="Library | Philosophy | The Kalam Cosmological Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1e)
 
 @client.command()
@@ -269,8 +269,8 @@ async def moral(ctx):
    embed1g.add_field(name="**1.**", value="If God does not exist, then objective moral values do not exist.", inline=False)
    embed1g.add_field(name="**2.**", value="Objective moral values exist.", inline=False)
    embed1g.add_field(name="**3.**", value="God exists.", inline=False)
-   embed1g.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-   embed1g.set_footer(text="Library | Philosophy | Moral Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+   embed1g.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+   embed1g.set_footer(text="Library | Philosophy | Moral Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
    await ctx.send(embed=embed1g)
 
 @client.command('Ontological', 'onto', 'Ontologicalargument')
@@ -282,8 +282,8 @@ async def ontological(ctx):
     embed1f.add_field(name="**4.**", value="Therefore, possibly, it is necessarily true that an omniscient, omnipotent, and perfectly good being exists.", inline=False)
     embed1f.add_field(name="**5.**", value="Therefore, (by axiom S5) it is necessarily true that an omniscient, omnipotent, and perfectly good being exists.", inline=False)
     embed1f.add_field(name="**6.**", value="Therefore, an omniscient, omnipotent and perfectly good being exists.", inline=False)
-    embed1f.set_footer(text="Library | Philosophy | The Ontological Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1f.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1f.set_footer(text="Library | Philosophy | The Ontological Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1f.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1f)
 
 @client.command('Design', 'designarg')
@@ -292,8 +292,8 @@ async def design(ctx):
     embed1v.add_field(name="**1.**", value="If God does not exist, the applicability of math to the physical world is just a coincidence.", inline=False)
     embed1v.add_field(name="**2.**", value="The applicability of math to the physical world is not just a coincidence.", inline=False)
     embed1v.add_field(name="**3.**", value="Therefore, God exists.", inline=False)
-    embed1v.set_footer(text="Library | Philosophy | The Design Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1v.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1v.set_footer(text="Library | Philosophy | The Design Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1v.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send (embed=embed1v)
 
 
@@ -305,8 +305,8 @@ async def contingency(ctx):
     embed1w.add_field(name="**3.**", value="The universe exists.", inline=False)
     embed1w.add_field(name="**4.**", value="Therefore, God caused it to exist.", inline=False)
     embed1w.add_field(name="**5.**", value="Therefore, God exists.", inline=False)
-    embed1w.set_footer(text="Library | Philosophy | The Contingency Argument", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1w.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1w.set_footer(text="Library | Philosophy | The Contingency Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1w.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1w)
 
 @client.command(aliases=['mirarg', 'MiraclesArg', 'Miraclesarg'])
@@ -316,8 +316,8 @@ async def miraclesarg(ctx):
     embed1x.add_field(name="**2.**", value="these facts are best explained by the thesis `God raised Jesus from the dead.`", inline=False)
     embed1x.add_field(name="**3.**", value="If God raised Jesus from the dead, then the God revealed by Jesus exists.", inline=False)
     embed1x.add_field(name="**4.**", value="Therefore, the God revealed by Jesus exists.", inline=False)
-    embed1x.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1x.set_footer(text="Library | Philosophy | The Argument from Miracles", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1x.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1x.set_footer(text="Library | Philosophy | The Argument from Miracles", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1x)
 
 #doctrinescmds
@@ -336,28 +336,36 @@ async def doctrines(ctx):
 @client.command(aliases=['trin', '3n1', 'Trinity'])
 async def trinity(ctx):
     embed1t = discord.Embed(title="The Doctrine of the Trinity", description="The doctrine of the Trinity has been ridiculed, poked at, and strawmanned long enough. That is why I am making this command. The Trinity is biblical, logical, and coherent, and strawmans will no longer be tolerated. The Trinity is as follows:", color=0x07185a9)
-    embed1t.add_field(name="**1.** ", value="One God in three persons, inseparable, co-equal, and co-eternal. They are of the same being; of the same Mind, the same agenda. They communicate with each other seamlessly; they are one being. Therefore, Let us refer to this triune being as God, and not strawman it to make it mean something it doesn't. It is NOT three gods. That is Polytheism, and Christians follow a Monotheistic God. It is NOT modalism, and that is a heresy.", inline=False)
+    embed1t.add_field(name="**1.** ", value="One God in **three persons**, __inseparable__, __co-equal__, and __co-eternal__. They are of the __same being__; of the same Mind, the same agenda. They communicate with each other seamlessly; they are one being. Therefore, Let us refer to this triune being as God, and not strawman Him to make Him seem like something He isn't. It is NOT three gods. That is Polytheism, and Christians follow a Monotheistic God. It is NOT modalism; that is a heresy. True Christianity is a well-thought-out daily exercise based in logic and coherence, subject to the will of the Father.", inline=False)
     embed1t.add_field(name="**2.**", value="Jesus is Co-equal with the Father, and is co-equal because he forgives sins that were indebted towards the Father. Jesus claimed to forgive sins. How can he have forgiven sins without being God? Even the Pharisees recognized this. Yet unitarians still deny that Jesus is God.", inline=False)
-    embed1t.add_field(name="**3.**", value="The Holy Spirit is co-equal with the Father. Genesis 1:2 says that `The Spirit of God hovered over the waters`. How do we know that this wasn't the Breath of God? Well, for one, if it was the breath of God, we would attribute his breath as air, and that limits God to a specific space. Therefore, to say that it was God's breath is limiting God, and marking him as a finite being.", inline=False)
-    embed1t.add_field(name="**4.**", value="Jesus is God incarnate, and cannot be God coming down as the Father, as then we would be limiting God (the Father) to a specific human body, and therefore God (the Father) would be finite. This, of course, is not true. God (the Father) is infinite, or he would not be able to create the earth. He outside of space, time, and matter.")
-    embed1t.set_footer(text="Library | Doctrines | Trinity", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1t.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1t.add_field(name="**3.**", value="The Holy Spirit is co-equal with the Father. Genesis 1:2 says that `The Spirit of God hovered over the waters`. How do we know that this wasn't the Breath of God? Well, for one, if it was the breath of God, we would attribute his breath as air, and that limits God to a specific space. Therefore, to say that it was God's breath is limiting God, and marking him as a finite being. Logically, a monotheistic God cannot be bound to a specific location in spacetime, therefore this is clearly incorrect. The Holy Spirit is not a 'Breath'.", inline=False)
+    embed1t.add_field(name="**4.**", value="Jesus is God incarnate, and cannot be God coming down as the Father, as then we would be limiting God (the Father) to a specific human body, and therefore God (the Father) would be finite. This, of course, is not true. God (the Father) is infinite, or he would not be able to create the earth. He is outside of space, time, and matter.")
+    embed1t.set_footer(text="Library | Doctrines | Trinity", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1t.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1t)
 
-@client.command(aliases=['5solas', 'Solas'])
-async def solas(ctx): 
+@client.command(aliases=['5solas', 'Solas', 'solascriptura'])
+async def solas(ctx):
     embed1u = discord.Embed(title="The Five Solas", color=discord.Color.random())
-    embed1u.add_field(name="**1.** | Sola Gracia", value="This Sola states that **Grace Alone** is what you are saved by. Uncoditional grace, not based upon Human merit and works. Romans 3:10-12; Ephesians 2:8-9", inline=False)
+    embed1u.add_field(name="**1.** | Sola Gracia", value="This Sola states that **Grace Alone** is what you are saved by. Unconditional grace, not based upon Human merit and works. Romans 3:10-12; Ephesians 2:8-9", inline=False)
     embed1u.add_field(name="**2.** | Sola Fide", value="This Sola states that **Faith Alone** is the vehicle that saves you. It is what sets Christianity apart from all other religions. It is belief in what God did, instead of hoping what you do will get you to heaven. Romans 4:4-5; Romans 5:8-9", inline=False)
     embed1u.add_field(name="**3.** | Sola Christus", value="This Sola states that **Christ Alone** is the way to salvation. John 14:6; Romans 10:9; Acts 4:12")
     embed1u.add_field(name="**4.** | Sola Scriptura", value="This Sola states that **Scripture Alone** is the inerrant word of God. 2 Peter 1:21; 2 Timothy 3:16-17")
     embed1u.add_field(name="**5.** | Soli Deo Gloria", value="This Sola states that we must put **Glory to God Alone**. Glory belongs to him, as he is the only one worthy of it all. Titus 3:4-5; John 6:44; 1 Corinthians 10:31", inline=False)
-    embed1u.set_footer(text="Library | Doctrines | The Five Solas", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed1u.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed1u.set_footer(text="Library | Doctrines | The Five Solas", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1u.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1u)
 
-#@client.command()
-#async def covtheo
+@client.command()
+async def covtheo(ctx):
+  embedcovtheo = discord.Embed(title="Covenant Theology: the Basis for modern Christian Thought", description="Covenant theology is the belief that everything in the Bible can be traced to two covenants. Here they are:")
+  embedcovtheo.add_field(name="**1.  The Covenant of Works**", value="This covenant is based on the Old Testament, and the Mosaic law. This is the covenant where you had to make sacrifices, perform rituals, and other *works*. This is the covenant that came first, and this is the covenant that was made with Abraham in Genesis 12:1-3.", inline=False)
+  embedcovtheo.add_field(name="**2. The Covenant of Grace**", value="This is the covenant that was spoken of in Jeremiah 31:33. This is the covenant that is explicitly by grace and through grace (Ephesians 2:8-9). This is the unconditional grace spoken of by Paul in his letter to Timothy (2 Timothy 1:9). This covenant was established through the knowledge and blood of Jesus Christ (John 3:16, Romans 10:9), and is still in effect today.", inline=False)
+  embedcovtheo.set_author(name="𝒮.𝒥.【𝑫𝒐𝒏𝒕𝑩𝒆𝑮𝒖𝒍𝒍𝒊𝒃𝒍𝒆】#7061", icon_url="https://i.ibb.co/Gvy6sxc/20210506-130209891-i-OS.jpg")
+  embedcovtheo.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+  embedcovtheo.set_footer(text="Library | Doctrines | Covenant Theology", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+  await ctx.send(embed=embedcovtheo)
+
 
 #churchfatherscmds
 
@@ -375,7 +383,7 @@ async def salvation(ctx):
     embed.add_field(name="-- What Does It Mean to be Saved?", )
     embed.add_field(name="To Learn More, Click This Link:", value="[Here](https://www.thechristianworldview.org/about-us-2/what-must-do-to-be-saved/)", inline=False)
     embed.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fman-praying-picture-id498338635%3Fk%3D6%26m%3D498338635%26s%3D170667a%26w%3D0%26h%3Djl6oJ5-f6MIR8e9odwIg_mAFt2udf8Ptv1Dyn9r4iYk%3D&f=1&nofb=1")
-    embed.set_footer(text="Library | Salvation", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed.set_footer(text="Library | Salvation", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed)
 
 
@@ -385,7 +393,7 @@ async def OR(ctx):
   embed16.add_field(name="`)ORyt`", value="Gives you the YouTube Resources", inline=False)
   embed16.add_field(name="`)ORws`", value="Gives you website resources", inline=False)
   embed16.set_thumbnail(url="https://media.istockphoto.com/photos/laptop-computer-with-empty-white-screen-on-the-table-picture-id1056971744?k=6&m=1056971744&s=170667a&w=0&h=Abwa8pKg4vlLUMYXAYyGQYInTq9HnwIgMrQVRqszRi4=")
-  embed16.set_footer(text="Library | Online Resources", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  embed16.set_footer(text="Library | Online Resources", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed16)
 
 
@@ -393,9 +401,9 @@ async def OR(ctx):
 async def ORws(ctx):
   embed20 = discord.Embed(title="Online Resources", color=0xffffff)
   embed20.add_field(name="The Christian Worldview - Website", value="[The Christian Worldview](https://www.thechristianworldview.org/)", inline=False)
-  embed20.add_field(name="The Bibilically Correct Podcast - Official Website", value="[BCP](https://www.biblicallycorrectpodcast.org/)", inline=False)
+  embed20.add_field(name="The Biblically Correct Podcast - Official Website", value="[BCP](https://www.biblicallycorrectpodcast.org/)", inline=False)
   embed20.add_field(name="To Be Continued", value="To talk more with fellow members, and access the Bot Developer's blog, click [here.](https://sjcoden.wordpress.com/)", inline=False)
-  embed20.set_footer(text="Library | Online Resources | Websites", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  embed20.set_footer(text="Library | Online Resources | Websites", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed20)
 
 
@@ -409,7 +417,7 @@ async def ORyt(ctx):
   value="[Cross Examined](https://www.youtube.com/user/TurekVideo)", inline=False)
   embed18.add_field(name="Rob Christian", value="[Rob Christian - Christian Polemicist](https://www.youtube.com/channel/UCFSZf2eM0fgtcGGzIxx_LBg)", inline=False)
   embed18.set_thumbnail(url="https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/YouTube-icon.png")
-  embed18.set_footer(text="Library | Online Resources | YouTube", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  embed18.set_footer(text="Library | Online Resources | YouTube", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed18)
 
 @client.command()
@@ -437,8 +445,8 @@ async def creeds(ctx):
                      inline=False)
     embed4.add_field(name="`)chalcedonian`",
                      value="The Chalcedonian Definition")
-    embed4.set_footer(text="Library | Creeds", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embed4.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed4.set_footer(text="Library | Creeds", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed4.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed4)
 
 
@@ -452,7 +460,7 @@ async def nicene(ctx):
                       value="In order to use this creed, type `)nicene1`.")
     embed10.add_field(name="Nicene Creed of 381",
                       value="In order to use this creed, type `)nicene2`. ")
-    embed10.set_footer(text="Library | Creeds | Nicene", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed10.set_footer(text="Library | Creeds | Nicene", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed10)
 
 #95 theses
@@ -468,7 +476,7 @@ async def nft(ctx):
     embed13.add_field(name="`)nft3`",
                       value="the 95 theses of Martin Luther, page 3", inline=False)
     embed13.set_thumbnail(url="https://cdn.discordapp.com/emojis/855070947870638090.png?v=1")
-    embed13.set_footer(text="Library | 95 Theses of Martin Luther", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed13.set_footer(text="Library | 95 Theses of Martin Luther", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed13)
 
 
@@ -508,7 +516,7 @@ async def nft1(ctx):
     embed11.add_field(
         name="-",
         value=
-        "**24.** *It must needs be, therefore, that the greater part of the people are deceived by that indiscriminate and highsounding promise of release from penalty.* **25.** *The power which the pope has, in a general way, over purgatory, is just like the power which any bishop or curate has, in a special way, within his own diocese or parish.* **26.** *The pope does well when he grants remission to souls [in purgatory], not by the power of the keys (which he does not possess), but by way of intercession.* **27.** *They preach man who say that so soon as the penny jingles into the money-box, the soul flies out [of purgatory].* **28.** *It is certain that when the penny jingles into the money-box, gain and avarice can be increased, but the result of the intercession of the Church is in the power of God alone.* **29.** *Who knows whether all the souls in purgatory wish to be bought out of it, as in the legend of Sts. Severinus and Paschal.*"
+        "**24.** *It must needs be, therefore, that the greater part of the people are deceived by that indiscriminate and high-sounding promise of release from penalty.* **25.** *The power which the pope has, in a general way, over purgatory, is just like the power which any bishop or curate has, in a special way, within his own diocese or parish.* **26.** *The pope does well when he grants remission to souls [in purgatory], not by the power of the keys (which he does not possess), but by way of intercession.* **27.** *They preach man who say that so soon as the penny jingles into the money-box, the soul flies out [of purgatory].* **28.** *It is certain that when the penny jingles into the money-box, gain and avarice can be increased, but the result of the intercession of the Church is in the power of God alone.* **29.** *Who knows whether all the souls in purgatory wish to be bought out of it, as in the legend of Sts. Severinus and Paschal.*"
     )
     embed11.set_footer(text="Library | 95 Theses of Martin Luther | Page 1")
     await ctx.send(embed=embed11)
@@ -553,7 +561,7 @@ async def nicene1(ctx):
         "We believe in one God, the Father Almighty, Maker of all things visible and invisible.And in one Lord Jesus Christ, the Son of God, begotten of the Father the only-begotten; that is, of the essence of the Father, God of God, Light of Light, very God of very God, begotten, not made, being of one substance with the Father; by whom all things were made both in heaven and on earth; who for us men, and for our salvation, came down and was incarnate and was made man; he suffered, and the third day he rose again, ascended into heaven; from thence he shall come to judge the quick and the dead.And in the Holy Ghost.But those who say: THERE WAS A TIME WHEN HE WAS NOT; and HE WAS NOT BEFORE HE WAS MADE and HE WAS MADE OUT OF NOTHING, or HE IS OF ANOTHER SUBSTANCE or ESSENCE, or THE SON OF GOD IS CREATED, or CHANGABLE, or ALTERABLE—they are condemned by the holy catholic and apostolic Church.",
         inline=False)
     embed5.set_thumbnail(url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fzimmermanband.com%2Fwp-content%2Fuploads%2F2018%2F02%2FniceneCREED-1024x683.jpg&f=1&nofb=1")
-    embed5.set_footer(text="Library | Creeds | The Nicene Creed of 325 A.D.", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed5.set_footer(text="Library | Creeds | The Nicene Creed of 325 A.D.", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed5)
 
 
@@ -574,7 +582,7 @@ async def nicene2(ctx):
     )
     embed6.set_thumbnail(
     url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fzimmermanband.com%2Fwp-content%2Fuploads%2F2018%2F02%2FniceneCREED-1024x683.jpg&f=1&nofb=1")
-    embed6.set_footer(text="Library | Creeds | The Nicene Creed of 381 A.D.", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed6.set_footer(text="Library | Creeds | The Nicene Creed of 381 A.D.", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed6)
 
 
@@ -602,7 +610,7 @@ async def athanasian(ctx):
         value=
         "For as the reasonable soul and flesh is one man, so God and man is one Christ; Who suffered for our salvation, descended into hell, rose again the third day from the dead; He ascended into heaven, He sitteth on the right hand of the Father, God Almighty; From thence He shall come to judge the living and the dead. At whose coming all men shall rise again with their bodies; And shall give account of their own works. And they that have done good shall go into life everlasting, and they that have done evil into everlasting fire. This is the catholic faith, which except a man believe faithfully, he cannot be saved.",
         inline=False)
-    embed8.set_footer(text="Library | Creeds | The Athanasian Creed", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed8.set_footer(text="Library | Creeds | The Athanasian Creed", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed8)
 
 @client.command()
@@ -614,7 +622,7 @@ async def apostles(ctx):
         value=
         "I believe in God, the Father Almighty, the Maker of heaven and earth, and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Ghost, born of the virgin Mary, suffered under Pontius Pilate, was crucified, dead, and buried; He descended into hell. The third day He arose again from the dead; He ascended into heaven, and sitteth on the right hand of God the Father Almighty; from thence he shall come to judge the quick and the dead. I believe in the Holy Ghost; the holy catholic church; the communion of saints; the forgiveness of sins; the resurrection of the body; and the life everlasting. Amen.",
         inline=False)
-    embed7.set_footer(text="Library | Creeds | Apostles' Creed", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed7.set_footer(text="Library | Creeds | Apostles' Creed", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed7)
 
 
@@ -634,7 +642,7 @@ async def chalcedonian(ctx):
         value=
         "the distinction of natures being in no way annulled by the union, but rather the characteristics of each nature being preserved and coming together to form one person and subsistence, not as parted or separated into two persons, but one and the same Son and Only-begotten God the Word, Lord Jesus Christ; even as the prophets from earliest times spoke of him, and our Lord Jesus Christ himself taught us, and the creed of the fathers has handed down to us.",
         inline=False)
-    embed9.set_footer(text="Library | Creeds | The Chalcedoinian Definition", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed9.set_footer(text="Library | Creeds | The Chalcedoinian Definition", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed9)
 
 
@@ -647,7 +655,7 @@ async def yeshua(ctx):
         "A man who came to earth and died as a man, that you might attain salvation through his blood. He was fully human, and fully God. There are many prophecies in the Hebrew Bible that foretell of this Majestic Messiah, the Suffering Servant. Many Jews today still do not believe that he was the Messiah, despite many prophecies suggesting otherwise. As Christians, we should pray for these people, who have rejected the One and Only Son (John 3:16). `For in that I speak to you Gentiles, inasmuch as I am the Apostle of the Gentiles, I magnify mine office, To try if by any means I might provoke them of my flesh to follow them, and might save some of them. For if the casting away of them be the reconciling of the world, what shall the receiving be, but life from the dead?` (Romans 11:13-15 GNV)",
         color=discord.Color.random())
     embed.set_thumbnail(url="http://www.talentshare.org/~mm9n/articles/Apostles_files/image007.jpg")
-    embed.set_footer(text="Library | Yeshua", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed.set_footer(text="Library | Yeshua", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed)
 
 
@@ -668,7 +676,7 @@ async def motivation(ctx):
         "What you are is God’s gift to you, what you become is your gift to God. - Hans Urs von Balthasar",
         "The Christian shoemaker does his duty not by putting little crosses on the shoes, but by making good shoes, because God is interested in good craftsmanship. - Martin Luther",
         "His grace is cheapened when you think that He has only forgiven you of your sins up to the time you got saved, and after that point, you have to depend on your confession of sins to be forgiven. God’s forgiveness is not given in installments. - Joseph Prince",
-        "Religion says, ‘I obey; therefore I am accepted.’ Christianity says, ‘I’m accepted, therefore I obey. -Timothy Keller",
+        "Religion says, ‘I obey; therefore I am accepted.’ Christianity says, ‘I’m accepted, therefore I obey'. -Timothy Keller",
         "Thou hast made us for thyself, O Lord, and our heart is restless until it finds its rest in thee. - St. Augustine of Hippo",
         "God loves each of us as if there were only one of us - St. Augustine",
         "The best thing about the future is that it comes only one day at a time. - Abraham Lincoln",
@@ -685,8 +693,8 @@ async def motivation(ctx):
 @client.command()
 async def invite(ctx):
   embed21 = discord.Embed(title="Invite The Bot", description="[Invite Me!](https://discord.com/api/oauth2/authorize?client_id=854424955907473458&permissions=397351709763&scope=bot)", color=0x7fffd4)
-  embed21.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-  embed21.set_footer(text="Bot Invite", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+  embed21.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+  embed21.set_footer(text="Bot Invite", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed21)
 
 
@@ -701,7 +709,7 @@ async def about(ctx):
     embed2.add_field(name="Date Version was Released:",
                      value="9/20/2021",
                      inline=False)
-    embed2.set_footer(text="Misc Commands | About", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embed2.set_footer(text="Misc Commands | About", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed2)
 
 #ping
@@ -720,8 +728,8 @@ async def ping(ctx):
                        value="<@751556186548994149>",
                        inline=False)
     embedVar.add_field(name="Bot Version:", value="v.1.3.2", inline=False)
-    embedVar.set_thumbnail(url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
-    embedVar.set_footer(text="Misc Commands | Ping", icon_url="https://images-ext-1.discordapp.net/external/Nbi-FIZy5ReZHtLUhZvg5Ro_DHaSD4ufel2xHzmuL2Y/%3Fsize%3D256/https/cdn.discordapp.com/avatars/854424955907473458/00280a72d982788e18febb7418ec9d1f.png")
+    embedVar.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embedVar.set_footer(text="Misc Commands | Ping", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embedVar)
 
 keep_alive()

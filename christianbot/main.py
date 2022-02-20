@@ -6,6 +6,7 @@ import asyncio
 from discord.ext import commands
 from keep_alive import keep_alive
 
+bot = discord.Bot()
 client = commands.Bot(command_prefix=')')
 client.remove_command("help")
 
@@ -54,7 +55,7 @@ client.loop.create_task(ch_pr())
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, user: discord.Member, *, reason=None):
     await user.ban(reason=reason)
-    await ctx.send(f"""{user} has been bannned successfully!! Be sure you right click on the person's @user and select `Copy ID` so you can unban them! \n
+    await ctx.send(f"""{user} has been bannned successfully!! Be sure to right click on the person's @user and select `Copy ID` if you want to unban them! \n
     **Note:** If you do not have ***Developer Mode*** turned on in your Discord App settings, you will not see this option.""")
 
 
@@ -90,6 +91,36 @@ async def help(ctx):
     embed1.set_footer(text="Help Menu", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1)
 
+
+@bot.slash_command()
+async def help(ctx):
+    embed1sl = discord.Embed(title="Main Menu",
+                           description="    ",
+                           color=discord.Color.random())
+    embed1sl.add_field(name="`)help`",
+                     value="Gets you this message.",
+                     inline=False)
+    embed1sl.add_field(name="`)ban`",
+                    value="Do `)ban @user` for this to work",
+                    inline=False)
+    embed1sl.add_field(name="`)motivation`",
+                    value="gives you a motivational quote",
+                    inline=False)
+    embed1sl.add_field(name="`)ping`",
+                    value="shows the bot's latency",
+                    inline=False)
+    embed1sl.add_field(name="`)about`",
+                    value="gives you a bit of info about the bot",
+                    inline=False)
+    embed1sl.add_field(name="`)invite`",value="Gives you the invite link for the bot")
+    embed1sl.add_field(
+        name="`)library`",
+        value=
+        "Gives you the bot's library and resource command list. This library is being updated as frequently as possible, so be sure to use it!",
+        inline=False)
+    embed1sl.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1sl.set_footer(text="Help Menu", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.respond(embed=embed1sl)
 
 #library
 
@@ -134,22 +165,44 @@ async def adhominem(ctx):
 @client.command(aliases=['f'])
 async def fallacies(ctx):
     embed1l= discord.Embed(title="Fallacy Commands", color=0x00007b)
-    embed1l.add_field(name="`)fallacy`", value="Gives you the image of fallacies", inline=False)
-    embed1l.add_field(name="`)strawman`", value="Gives you the straw man fallacy.", inline=False)
-    embed1l.add_field(name="`)begging`", value="Gives you the begging the question fallacy", inline=False)
-    embed1l.add_field(name="`)generalizing`", value="Gives you the Hasty generalization fallacy", inline=False)
-    embed1l.add_field(name="`)adhominem`", value="Gives you the AD Hominem Fallacy", inline=False)
-    embed1l.add_field(name="`)posthoc`", value="Gives you the Post Hoc/False Cause fallacy", inline=False)
-    embed1l.add_field(name="`)falsedichotomy`", value="Gives you the fallacy of false dichotomy", inline=False)
-    embed1l.add_field(name="`)adignorantiam`", value="Gives you the fallacy of `Argument from Ignorance`", inline=False)
-    embed1l.add_field(name="`)bandwagon`", value="Gives you the Bandwagon Fallacy", inline=False)
-    embed1l.add_field(name="`)nonsequitur`", value="Gives you the Non Sequitur fallacy", inline=False)
-    embed1l.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=False)
-    embed1l.add_field(name="`)atauthority`", value="Gives you the Appeal To Authority Fallacy", inline=False)
-    embed1l.add_field(name="`)shotgun`", value="Gives you the shotgun fallacy", inline=False)
+    embed1l.add_field(name="`)fallacy`", value="Gives you the image of fallacies", inline=True)
+    embed1l.add_field(name="`)strawman`", value="Gives you the straw man fallacy.", inline=True)
+    embed1l.add_field(name="`)begging`", value="Gives you the begging the question fallacy", inline=True)
+    embed1l.add_field(name="`)generalizing`", value="Gives you the Hasty generalization fallacy", inline=True)
+    embed1l.add_field(name="`)adhominem`", value="Gives you the AD Hominem Fallacy", inline=True)
+    embed1l.add_field(name="`)posthoc`", value="Gives you the Post Hoc/False Cause fallacy", inline=True)
+    embed1l.add_field(name="`)falsedichotomy`", value="Gives you the fallacy of false dichotomy", inline=True)
+    embed1l.add_field(name="`)adignorantiam`", value="Gives you the fallacy of `Argument from Ignorance`", inline=True)
+    embed1l.add_field(name="`)bandwagon`", value="Gives you the Bandwagon Fallacy", inline=True)
+    embed1l.add_field(name="`)nonsequitur`", value="Gives you the Non Sequitur fallacy", inline=True)
+    embed1l.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=True)
+    embed1l.add_field(name="`)atauthority`", value="Gives you the Appeal To Authority Fallacy", inline=True)
+    embed1l.add_field(name="`)shotgun`", value="Gives you the shotgun fallacy", inline=True)
+    embed1l.add_field(name="`)redherring`", value="Gives you the Red Herring fallacy", inline=True)
     embed1l.set_footer(text="Library | Fallacies", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     embed1l.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1l)
+
+@bot.slash_command()
+async def fallacies(ctx):
+    embed1lsl= discord.Embed(title="Fallacy Commands", color=0x00007b)
+    embed1lsl.add_field(name="`)fallacy`", value="Gives you the image of fallacies", inline=True)
+    embed1lsl.add_field(name="`)strawman`", value="Gives you the straw man fallacy.", inline=True)
+    embed1lsl.add_field(name="`)begging`", value="Gives you the begging the question fallacy", inline=True)
+    embed1lsl.add_field(name="`)generalizing`", value="Gives you the Hasty generalization fallacy", inline=True)
+    embed1lsl.add_field(name="`)adhominem`", value="Gives you the AD Hominem Fallacy", inline=True)
+    embed1lsl.add_field(name="`)posthoc`", value="Gives you the Post Hoc/False Cause fallacy", inline=True)
+    embed1lsl.add_field(name="`)falsedichotomy`", value="Gives you the fallacy of false dichotomy", inline=True)
+    embed1lsl.add_field(name="`)adignorantiam`", value="Gives you the fallacy of `Argument from Ignorance`", inline=True)
+    embed1lsl.add_field(name="`)bandwagon`", value="Gives you the Bandwagon Fallacy", inline=True)
+    embed1lsl.add_field(name="`)nonsequitur`", value="Gives you the Non Sequitur fallacy", inline=True)
+    embed1lsl.add_field(name="`)bopr`", value="Gives you the Burden of Proof Reversal Fallacy", inline=True)
+    embed1lsl.add_field(name="`)atauthority`", value="Gives you the Appeal To Authority Fallacy", inline=True)
+    embed1lsl.add_field(name="`)shotgun`", value="Gives you the shotgun fallacy", inline=True)
+    embed1lsl.add_field(name="`)redherring`", value="Gives you the Red Herring fallacy", inline=True)
+    embed1lsl.set_footer(text="Library | Fallacies", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1lsl.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.respond(embed=embed1lsl)
 
 @client.command(aliases=['appealtoauthority', 'ata', 'appealtoa', 'Atauthority'])
 async def atauthority(ctx):
@@ -163,6 +216,7 @@ async def shotgun(ctx):
     embed2a = discord.Embed(title="Shotgun [Argument style] - Fallacy", description="The use of multiple arguments at a time in order to overwhelm the opponent.", color=0x00008b)
     embed2a.set_footer(text="", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     embed2a.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.send(embed=embed2a)
 
 
 @client.command(aliases=['sm', 'Strawman'])
@@ -171,6 +225,13 @@ async def strawman(ctx):
     embed1i.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     embed1i.set_footer(text="Library | Fallacies | Strawman Fallacy")
     await ctx.send(embed=embed1i)
+
+@client.command()
+async def redherring(ctx):
+    embedrhsl = discord.Embed(title="Red Herring - Fallacy", description="Red herrings can be easily spotted in the following manner: \n If a person avoids arguments to avoid key points that may dismantle their argument, this is called a Red Herring. Often this is associated with diversionary tactics that don't specifically relate to the subject at hand.", color=0x00008b)
+    embedrhsl.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embedrhsl.set_footer(text="Library | Fallacies | Red Herring", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.send(embed=embedrhsl)
 
 @client.command(aliases=['beggingthequestion', 'beggingtheq', 'bthequestion', 'btquestion', 'Begging'])
 async def begging(ctx):
@@ -273,7 +334,7 @@ async def moral(ctx):
    embed1g.set_footer(text="Library | Philosophy | Moral Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
    await ctx.send(embed=embed1g)
 
-@client.command('Ontological', 'onto', 'Ontologicalargument')
+@client.command(aliases=['Ontological', 'onto', 'Ontologicalargument'])
 async def ontological(ctx):
     embed1f = discord.Embed(title="The Ontological Argument", url="https://www.allaboutphilosophy.org/ontological-argument.htm", color=0x00008b)
     embed1f.add_field(name="**1.**", value="A being has *maximal excellence* in a given possible world *W* if and only if it is omnipotent, omniscient and wholly good in *W*; and", inline=False)
@@ -286,7 +347,7 @@ async def ontological(ctx):
     embed1f.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed1f)
 
-@client.command('Design', 'designarg')
+@client.command(aliases=['Design', 'designarg'])
 async def design(ctx):
     embed1v = discord.Embed(title="The Design Argument (this is one of many design arguments)", color=0x00008b)
     embed1v.add_field(name="**1.**", value="If God does not exist, the applicability of math to the physical world is just a coincidence.", inline=False)
@@ -296,6 +357,15 @@ async def design(ctx):
     embed1v.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send (embed=embed1v)
 
+@bot.slash_command()
+async def design(ctx):
+    embed1vsl = discord.Embed(title="The Design Argument (this is one of many design arguments)", color=0x00008b)
+    embed1vsl.add_field(name="**1.**", value="If God does not exist, the applicability of math to the physical world is just a coincidence.", inline=False)
+    embed1vsl.add_field(name="**2.**", value="The applicability of math to the physical world is not just a coincidence.", inline=False)
+    embed1vsl.add_field(name="**3.**", value="Therefore, God exists.", inline=False)
+    embed1vsl.set_footer(text="Library | Philosophy | The Design Argument", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed1vsl.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.repond(embed=embed1vsl)
 
 @client.command(aliases=['cont', 'Contingency'])
 async def contingency(ctx):
@@ -328,10 +398,16 @@ async def doctrines(ctx):
     embed1s = discord.Embed(title="Doctrines", description="Common doctrines for the Christian Faith - Commands", color=0xffcccb)
     embed1s.add_field(name="`)trinity`", value="Gives you the doctrine of the Trinity. This is being expanded at the moment.", inline=False)
     embed1s.add_field(name="`)solas`", value="Gives you the Five solas of the Christian Faith.", inline=False)
-    embed1s.add_field(name="`)covtheo`", value="Coming soon", inline=False)
+    embed1s.add_field(name="`)covtheo`", value="Shows you the Covenant Theology doctrin.", inline=False)
     await ctx.send(embed=embed1s)
 
-
+@bot.slash_command()
+async def doctrines(ctx):
+    embed1s = discord.Embed(title="Doctrines", description="Common doctrines for the Christian Faith - Commands", color=0xffcccb)
+    embed1s.add_field(name="`)trinity`", value="Gives you the doctrine of the Trinity. This is being expanded at the moment.", inline=False)
+    embed1s.add_field(name="`)solas`", value="Gives you the Five solas of the Christian Faith.", inline=False)
+    embed1s.add_field(name="`)covtheo`", value="Shows you the Covenant Theology doctrin.", inline=False)
+    await ctx.respond(embed=embed1s)
 
 @client.command(aliases=['trin', '3n1', 'Trinity'])
 async def trinity(ctx):
@@ -396,6 +472,14 @@ async def OR(ctx):
   embed16.set_footer(text="Library | Online Resources", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
   await ctx.send(embed=embed16)
 
+@bot.slash_command()
+async def onlineresources(ctx):
+  embed16sl = discord.Embed(title="Online Resources", color=0xffffff)
+  embed16sl.add_field(name="`)ORyt`", value="Gives you the YouTube Resources", inline=False)
+  embed16sl.add_field(name="`)ORws`", value="Gives you website resources", inline=False)
+  embed16sl.set_thumbnail(url="https://media.istockphoto.com/photos/laptop-computer-with-empty-white-screen-on-the-table-picture-id1056971744?k=6&m=1056971744&s=170667a&w=0&h=Abwa8pKg4vlLUMYXAYyGQYInTq9HnwIgMrQVRqszRi4=")
+  embed16sl.set_footer(text="Library | Online Resources", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+  await ctx.respond(embed=embed16sl)
 
 @client.command()
 async def ORws(ctx):
@@ -449,6 +533,27 @@ async def creeds(ctx):
     embed4.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed4)
 
+@bot.slash_command()
+async def creeds(ctx):
+    embed4sl = discord.Embed(title="Commands for Creeds",
+                           color=0x000000)
+    embed4sl.add_field(name="`)nicene1`",
+                     value="The Nicene Creed of 325 AD",
+                     inline=False)
+    embed4sl.add_field(name="`)nicene2`",
+                     value="The Nicene Creed of 381 AD",
+                     inline=False)
+    embed4sl.add_field(name="`)apostles`",
+                     value="The Apostles' Creed",
+                     inline=False)
+    embed4sl.add_field(name="`)athanasian`",
+                     value="The Athanasian Creed",
+                     inline=False)
+    embed4sl.add_field(name="`)chalcedonian`",
+                     value="The Chalcedonian Definition")
+    embed4sl.set_footer(text="Library | Creeds", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    embed4sl.set_thumbnail(url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.respond(embed=embed4sl)
 
 
 @client.command()
@@ -486,35 +591,35 @@ async def nft1(ctx):
                             Description="The 95 Theses of Martin Luther - Page 1",
                             color=0x548b54)
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "Out of love for the truth and the desire to bring it to light, the following propositions will be discussed at Wittenberg, under the presidency of the Reverend Father Martin Luther, Master of Arts and of Sacred Theology, and Lecturer in Ordinary on the same at that place. Wherefore he requests that those who are unable to be present and debate orally with us, may do so by letter.",
         inline=False)
-    embed11.add_field(name="-",
+    embed11.add_field(Name="-",
                       value="In the Name our Lord Jesus Christ. Amen.",
                       inline=False)
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "**1.** *Our Lord and Master Jesus Christ, when He said Poenitentiam agite, willed that the whole life of believers should be repentance.* **2.** *This word cannot be understood to mean sacramental penance, i.e., confession and satisfaction, which is administered by the priests.*  **3.** *Yet it means not inward repentance only; nay, there is no inward repentance which does not outwardly work divers mortifications of the flesh.* **4.** *The penalty [of sin], therefore, continues so long as hatred of self continues; for this is the true inward repentance, and continues until our entrance into the kingdom of heaven.* **5.** *The pope does not intend to remit, and cannot remit any penalties other than those which he has imposed either by his own authority or by that of the Canons.*",
         inline=False)
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "**6.** *The pope cannot remit any guilt, except by declaring that it has been remitted by God and by assenting to God's remission; though, to be sure, he may grant remission in cases reserved to his judgment. If his right to grant remission in such cases were despised, the guilt would remain entirely unforgiven.* **7.** *God remits guilt to no one whom He does not, at the same time, humble in all things and bring into subjection to His vicar, the priest.* **8.** *The penitential canons are imposed only on the living, and, according to them, nothing should be imposed on the dying.* **9.** *Therefore the Holy Spirit in the pope is kind to us, because in his decrees he always makes exception of the article of death and of necessity.* **10.** *Ignorant and wicked are the doings of those priests who, in the case of the dying, reserve canonical penances for purgatory.*"
     )
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "**11.** *This changing of the canonical penalty to the penalty of purgatory is quite evidently one of the tares that were sown while the bishops slept.* **12.** *In former times the canonical penalties were imposed not after, but before absolution, as tests of true contrition.* **13.** *The dying are freed by death from all penalties; they are already dead to canonical rules, and have a right to be released from them.* **14.** *The imperfect health [of soul], that is to say, the imperfect love, of the dying brings with it, of necessity, great fear; and the smaller the love, the greater is the fear.* **15.** *This fear and horror is sufficient of itself alone (to say nothing of other things) to constitute the penalty of purgatory, since it is very near to the horror of despair.* **16.** *Hell, purgatory, and heaven seem to differ as do despair, almost-despair, and the assurance of safety.* **17.** *With souls in purgatory it seems necessary that horror should grow less and love increase.*",
         inline=False)
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "**18.** *It seems unproved, either by reason or Scripture, that they are outside the state of merit, that is to say, of increasing love.* **19.** *Again, it seems unproved that they, or at least that all of them, are certain or assured of their own blessedness, though we may be quite certain of it.* **20.** *Therefore by `full remission of all penalties` the pope means not actually `of all,` but only of those imposed by himself.* **21.** *Therefore those preachers of indulgences are in error, who say that by the pope's indulgences a man is freed from every penalty, and saved;* **22.** *Whereas he remits to souls in purgatory no penalty which, according to the canons, they would have had to pay in this life.* **23.** *If it is at all possible to grant to any one the remission of all penalties whatsoever, it is certain that this remission can be granted only to the most perfect, that is, to the very fewest.*"
     )
     embed11.add_field(
-        name="-",
+        Name="-",
         value=
         "**24.** *It must needs be, therefore, that the greater part of the people are deceived by that indiscriminate and high-sounding promise of release from penalty.* **25.** *The power which the pope has, in a general way, over purgatory, is just like the power which any bishop or curate has, in a special way, within his own diocese or parish.* **26.** *The pope does well when he grants remission to souls [in purgatory], not by the power of the keys (which he does not possess), but by way of intercession.* **27.** *They preach man who say that so soon as the penny jingles into the money-box, the soul flies out [of purgatory].* **28.** *It is certain that when the penny jingles into the money-box, gain and avarice can be increased, but the result of the intercession of the Church is in the power of God alone.* **29.** *Who knows whether all the souls in purgatory wish to be bought out of it, as in the legend of Sts. Severinus and Paschal.*"
     )
@@ -658,7 +763,16 @@ async def yeshua(ctx):
     embed.set_footer(text="Library | Yeshua", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed)
 
-
+@client.slash_command()
+async def yeshua(ctx):
+    embed = discord.Embed(
+        title="יֵשׁוּעַ = Yeshua",
+        description=
+        "A man who came to earth and died as a man, that you might attain salvation through his blood. He was fully human, and fully God. There are many prophecies in the Hebrew Bible that foretell of this Majestic Messiah, the Suffering Servant. Many Jews today still do not believe that he was the Messiah, despite many prophecies suggesting otherwise. As Christians, we should pray for these people, who have rejected the One and Only Son (John 3:16). `For in that I speak to you Gentiles, inasmuch as I am the Apostle of the Gentiles, I magnify mine office, To try if by any means I might provoke them of my flesh to follow them, and might save some of them. For if the casting away of them be the reconciling of the world, what shall the receiving be, but life from the dead?` (Romans 11:13-15 GNV)",
+        color=discord.Color.random())
+    embed.set_thumbnail(url="http://www.talentshare.org/~mm9n/articles/Apostles_files/image007.jpg")
+    embed.set_footer(text="Library | Yeshua", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.respond(embed=embed)
 
 @client.command()
 async def motivation(ctx):
@@ -711,6 +825,20 @@ async def about(ctx):
                      inline=False)
     embed2.set_footer(text="Misc Commands | About", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
     await ctx.send(embed=embed2)
+
+@bot.slash_command()
+async def about(ctx):
+    embed2sl = discord.Embed(
+        title="About This Bot",
+        description=
+        "This is a brand new bot coded by <@751556186548994149>. To learn more about this bot, dm him, and he will get to you as soon as he can! Also, we would appreciate it if you joined the support server [here.](https://discord.gg/z2RR4EvtaZ)",
+        color=0x000033)
+    embed2sl.add_field(name="Bot Version:", value="v. 1.3.2 Beta", inline=False)
+    embed2sl.add_field(name="Date Version was Released:",
+                     value="9/20/2021",
+                     inline=False)
+    embed2sl.set_footer(text="Misc Commands | About", icon_url="https://i.ibb.co/ZSDFDPx/Christian-Bot-pfp-v1.png")
+    await ctx.respond(embed=embed2sl)
 
 #ping
 @client.command()

@@ -7,7 +7,7 @@ authors = ["S.J. <dont.be.gullible@pm.me>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.7.3"
-Flask = "^2.0.1"
+Flask = "^2.2.5"
 
 [tool.poetry.dev-dependencies]
 
